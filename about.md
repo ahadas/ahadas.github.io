@@ -12,7 +12,7 @@ I live in Tel-Aviv, Israel.
 Following are the projects I work on.  
 More information about my open source contributions is available on [Open HUB](https://www.openhub.net/accounts/Arik_Hadas/).
 
-## oVirt
+## oVirt {#ovirt}
 [oVirt](http://www.ovirt.org) is a virtualization management platform optimized to the KVM hypervisor. It was founded by Red Hat as a community project on which Red Hat Enterprise Virtualization is based. It allows centralized management of virtual machines, compute, storage and networking resources, from an easy to use web-based front-end with platform independent access.
 
 I have been contributing to oVirt since 2012, mainly to VM-lifecycle related flows in ovirt-engine. Since 2014 I am a co-maintainer of ovirt-engine.  
@@ -82,22 +82,28 @@ Modularity 2016
 A Language Workbench for Creating Production-Ready Extensions to AspectJ  
 Modularity 2015
 
-# Presentations
+# Presentations {#presentations}
 
 **Language Oriented Modularity: From Theory to Practice**  
-Student Research Competition, Modularity 2016
+Student Research Competition, Modularity 2016  
+[<img src="/images/pdf.png" width="25">](/pdfs/src_16.pdf)
+[<img src="/images/pdf.png" width="25">](/pdfs/poster_src_16.pdf)  
 
 **Toward disposable domain-specific aspect languages**  
-Workshop on Foundations Of Aspect-Oriented Languages 2016
+Workshop on Foundations Of Aspect-Oriented Languages 2016  
+[<img src="/images/pdf.png" width="25">](/pdfs/Toward Disposable Domain-Specific Aspect Languages.pdf)
 
 **Toward practical language oriented modularity**  
-Workshop on Language Modularity À La Mode 2016
+Workshop on Language Modularity À La Mode 2016  
+[<img src="/images/pdf.png" width="25">](/pdfs/Toward Practical Language Oriented Modularity.pdf)
 
 **Application-specific language-oriented modularity: a case study of the ovirt project**  
-Workshop on Modularity Across the System Stack 2016
+Workshop on Modularity Across the System Stack 2016  
+[<img src="/images/pdf.png" width="25">](/pdfs/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)
 
 **Managed conversion of guests to oVirt**  
-KVM Forum 2015
+KVM Forum 2015  
+[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=rYrnfduAkU0&nohtml5=False)  
 
 **Demanding First-Class Equality for Domain Specific Aspect Languages**  
 Position papers track, Modularity 2015
@@ -112,7 +118,10 @@ Student Research Competition, Modularity 2015
 Demo session, Modularity 2015
 
 **Moving your Virtual Machines to oVirt with ease**  
-FOSDEM 2015
+FOSDEM 2015  
+[<img src="/images/pdf.png" width="25">](/pdfs/v2v-fosdem.pdf)
 
 **RAM Snapshots in oVirt**  
-CloudOpen Europe 2013
+CloudOpen Europe 2013  
+[<img src="/images/pdf.png" width="25">](/pdfs/ram_snapshots.pdf)
+[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=xIhPV66uGo8)  
