@@ -31,7 +31,13 @@ At the beginning, the locking mechanism in oVirt on which the synchronization ha
 But this design did not fit for other requirements that were added as the application evolved. For example, addition of read-locks in the database (in order to support [multiple VM creations from the same template](https://bugzilla.redhat.com/show_bug.cgi?id=815642)) required to change many entities in the database. As a result, the locking mechanism was enhanced with different constructs for different flows that made it more complex.  
 
 ### Internal DSL
-The specification of the lock properties is one of the things that became more complex to define. [Bugzilla 995836](https://bugzilla.redhat.com/show_bug.cgi?id=995836) describes an attempt to improve it by replacing the previously used Java annotation with an *[Internal DSL](http://martinfowler.com/books/dsl.html)* (also known as *[Fluent API](https://en.wikipedia.org/wiki/Fluent_interface)*).
+The specification of the lock properties is one of the things that became more complex to define. [Bugzilla 995836](https://bugzilla.redhat.com/show_bug.cgi?id=995836) describes an attempt to improve it by replacing the previously used Java annotation with an *[Internal DSL](http://martinfowler.com/books/dsl.html)* (also known as *[Fluent API](https://en.wikipedia.org/wiki/Fluent_interface)*). An example of lock properties specification with the internal DSL:
+
+```java
+protected LockProperties applyLockProperties(LockProperties lockProperties) {
+    return lockProperties.withScope(Scope.Execution).withWait(true);
+}
+```
 
 While the benefit of having internal DSL vs. use of Java annotations for defining the desired lock properties is debatable, it is clear that the fundamental problems of scattered and tangled code remain. The scattered lock configurations leads to low traceability that reduces productivity and produces bugs, such as [bugzilla 1251956](https://bugzilla.redhat.com/show_bug.cgi?id=1251956). In addition, CommandBase is hard to maintain because of high tangling.
 
