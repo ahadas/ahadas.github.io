@@ -69,4 +69,4 @@ The development of application-specific aspect languages for different crosscutt
 
 I obtained the first place in the ACM student research competition at [Modularity'16](http://2016.modularity.info/) where this work was presented. Different aspects of this work were presented in three workshops at Modularity'16. More information and resources are available [here](/about#presentations).    
 
-The AspectJ compiler (ajc) was modified to support these languages. The compiler development for better support of *Language-Oriented Modularization (LOM)*, a methodology that promotes the development and use of DSALs as part of the software modularization process, is a work-in-progress.
+The AspectJ compiler (ajc) was modified to support these languages. The compiler development for better support for *Language-Oriented Modularization (LOM)*, a methodology that promotes the development and use of DSALs as part of the software modularization process, is a work-in-progress.
