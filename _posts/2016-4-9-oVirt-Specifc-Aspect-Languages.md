@@ -20,7 +20,7 @@ This post demonstrates the development and use of *Application-Specific Aspect L
 Some of the operations that are supported by oVirt cannot be executed simultaneously and it is one of the responsibilities of ovirt-engine, the central component in oVirt that clients interact with, to prevent such conflicts from happening.
 
 ### Evolution of a Crosscutting-Concern
-Synchronization is considered to be a classic example of a crosscutting-concern, and the synchronization needed in oVirt is no exception.  
+Synchronization is considered to be a classic example of crosscutting-concern, and the synchronization needed in oVirt is no exception.  
 
 The core responsibility of ovirt-engine is to execute operations it gets from clients. Therefore, it only makes sense that its design is based on the *[Command pattern](https://en.wikipedia.org/wiki/Command_pattern)*. Encapsulating each operation as a command class makes the software easier to maintain and having common root class for all commands allows to treat them uniformly.  
 
@@ -44,7 +44,7 @@ While the benefit of having internal DSL vs. use of Java annotations for definin
 # oVirt-Specific Aspect Language
 Obviously, (either external or internal) DSL is not the right solution for the described synchronization concern. DSL can simplify the expression of part of the locks configuration, but it cannot improve the modularization of the scattered and tangled code.  
 
-The synchronization concern can be modularized with a general-purpose aspect language, such as [AspectJ](https://eclipse.org/aspectj). However, since AspectJ is an extension to Java, most of oVirt developers would need to know additional programming language which puts the cost-effectiveness into question.  
+The synchronization concern can be modularized with a general-purpose aspect language, such as [AspectJ](https://eclipse.org/aspectj). However, since AspectJ is an extension to Java, most of oVirt developers would need to know additional programming language which puts the cost-effectiveness of this approach into question.  
 
 ## ovirt-sync: Aspect Language for Synchronization in oVirt
 Application-specific aspect language can improve the modularization of crosscutting-concern (unlike DSL) and improve the cost-effectiveness of using the language (vs. general-purpose aspect language.  
@@ -53,7 +53,7 @@ The following video shows part of the configuration of an application-specific a
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=uj80yWutQak" target="_blank"><img src="http://img.youtube.com/vi/uj80yWutQak/0.jpg" alt="Developing a DSAL for synchronization in oVirt" width="240" height="180" border="10" /></a>
 
-The next video demonstrates the development of the synchronization needed for one command in oVirt, MigrateVmCommand, in ovirt-sync. Note the editing tools that are provided such as auto-completion, text-highlighting and syntax-error checking along with aspect-specific development tools like AJDT markers (shown next to line 1,2 that indicate this code affect certain points in the base code. Similar markers are also shown next to the affected places in the base code). The last part shows the generated AspectJ aspect.  
+The next video demonstrates programming the synchronization needed for one command in oVirt, MigrateVmCommand, in ovirt-sync. Note the editing tools that are provided such as auto-completion, text-highlighting and syntax-error checking along with aspect-specific development tools like AJDT markers (shown next to line 1,2 that indicate this code affect certain points in the base code. Similar markers are also shown next to the affected places in the base code). The last part shows the generated AspectJ aspect.  
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=PTy9rYDQSo4" target="_blank"><img src="http://img.youtube.com/vi/PTy9rYDQSo4/0.jpg" alt="Resolving synchronization in oVirt with DSAL" width="240" height="180" border="10" /></a>
 
