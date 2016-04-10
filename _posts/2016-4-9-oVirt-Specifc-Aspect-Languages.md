@@ -10,7 +10,7 @@ This post demonstrates the development and use of *Application-Specific Aspect L
 ## Application-Specific Aspect Languages
 *Aspect-oriented programming (AOP) languages* provide a modularization layer for *crosscutting-concerns*. These are requirements whose implementation does not conform the dominant design of the software at hand. AOP promotes the implementation of a crosscutting-concern within a modularization unit called *aspect* that would be woven into the *base code* instead of having it scattered and tangled across the *base code* along with the core business logic of the application.  
 
-*Domain-specific languages (DSLs)* are programming languages that are tailored to problems of a specific domain. By being more restrictive and allowing programmers to use notions and abstractions that are closer to the problem at hand, DSL is typically easier to program with than a general-purpose language. *Language workbenches* provide supportive tools for developing DSLs and programming with DSLs, thus facilitate the *language-oriented programming (LOP)* paradigm that promotes the development and use of DSLs as part of software development process.
+*Domain-specific languages (DSLs)* are programming languages that are tailored to problems of a specific domain. By being more restrictive and allowing programmers to use notions and abstractions that are closer to the problem at hand, DSL is typically easier to program with than a general-purpose language. *Language workbenches* provide supportive tools for developing DSLs and programming with DSLs, thus facilitate the *language-oriented programming (LOP)* paradigm that promotes the development and use of DSLs as part of the software development process.
 
 *Domain-specific aspect languages (DSALs)* are programming languages that are both aspect-oriented and domain-specific. DSAL allows to resolve crosscutting-concern of a particular domain by implementing it in its own module and expressing it with a domain-specific syntax.  
 
@@ -20,7 +20,7 @@ This post demonstrates the development and use of *Application-Specific Aspect L
 Some of the operations that are supported by oVirt cannot be executed simultaneously and it is one of the responsibilities of ovirt-engine, the central component in oVirt that clients interact with, to prevent such conflicts from happening.
 
 ### Evolution of a Crosscutting-Concern
-Synchronization is considered to be a classic example of crosscutting-concern, and the synchronization needed in oVirt is no exception.  
+Synchronization is known as a classic example of crosscutting-concern, and the synchronization needed in oVirt is no exception.  
 
 The core responsibility of ovirt-engine is to execute operations it gets from clients. Therefore, it only makes sense that its design is based on the *[Command pattern](https://en.wikipedia.org/wiki/Command_pattern)*. Encapsulating each operation as a command class makes the software easier to maintain and having common root class for all commands allows to treat them uniformly.  
 
@@ -47,7 +47,7 @@ Obviously, (either external or internal) DSL is not the right solution for the d
 The synchronization concern can be modularized with a general-purpose aspect language, such as [AspectJ](https://eclipse.org/aspectj). However, since AspectJ is an extension to Java, most of oVirt developers would need to know additional programming language which puts the cost-effectiveness of this approach into question.  
 
 ## ovirt-sync: Aspect Language for Synchronization in oVirt
-Application-specific aspect language can improve the modularization of crosscutting-concern (unlike DSL) and improve the cost-effectiveness of using the language (vs. general-purpose aspect language.  
+Application-specific aspect language can improve the modularization of crosscutting-concern (unlike DSL) and improve the cost-effectiveness of using the language (vs. general-purpose aspect language).  
 
 The following video shows part of the configuration of an application-specific aspect language for the synchronization problem in oVirt, called ovirt-sync, using the [Xtext](https://eclipse.org/Xtext) language workbench. The grammar of the language is defined in Locks.xtext file and the transformation of an aspect written in ovirt-sync into an aspect in AspectJ is defined in LocksGenerator.xtend. The last part of the video shows an aspect written in ovirt-sync (locks.ovirt) and the AspectJ aspect it generates (Locks.aj).  
 
@@ -65,7 +65,7 @@ While it might not be reflected by the first video, as it only shows the product
 The locks for three commands in oVirt (namely, MigrateVmCommand, AddDiskCommand and ExportVmTemplateCommand) were defined in ovirt-sync as well as auditing and permission checks that were defined in two other application-specific aspect languages. Clearly, programming in these languages significantly reduces the amount of scattered code within the command classes and the amount of tangled code within CommandBase.
 
 # Summary and Future Work
-The development of application-specific aspect languages for different crosscutting-concerns found in oVirt and programming with them show the power of these languages in improving software modularity and their improved cost-effectiveness compared to ordinary domain-specific aspect languages.  
+The development of application-specific aspect languages for different crosscutting-concerns found in oVirt and programming with them show the power of these languages in improving software modularity and their improved cost-effectiveness compared to ordinary domain-specific aspect languages and general-purpose aspect languages.  
 
 I obtained the first place in the ACM student research competition at [Modularity'16](http://2016.modularity.info/) where this work was presented. Different aspects of this work were presented in three workshops at Modularity'16. More information and resources are available [here](/about#presentations).    
 
