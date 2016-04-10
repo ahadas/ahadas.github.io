@@ -46,19 +46,23 @@ Software development methodologies and tools.
 ## Publications
 **Language oriented modularity: from theory to practice**  
 Arik Hadas  
-Modularity (Companion) 2016
+Modularity (Companion) 2016  
+[<img src="/images/pdf.png" width="25">](/papers/Language Oriented Modularity: From Theory to Practice.pdf)
 
 **Toward disposable domain-specific aspect languages**  
 Arik Hadas, David Lorenz  
-Modularity (Companion) 2016
+Modularity (Companion) 2016  
+[<img src="/images/pdf.png" width="25">](/papers/Toward Disposable Domain-Specific Aspect Languages.pdf)
 
 **Toward practical language oriented modularity**  
 Arik Hadas, David Lorenz  
-Modularity (Companion) 2016
+Modularity (Companion) 2016  
+[<img src="/images/pdf.png" width="25">](/papers/Toward Practical Language Oriented Modularity.pdf)
 
 **Application-specific language-oriented modularity: a case study of the ovirt project**  
 Arik Hadas, David Lorenz  
-Modularity (Companion) 2016
+Modularity (Companion) 2016  
+[<img src="/images/pdf.png" width="25">](/papers/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)
 
 **A language workbench for implementing your favorite extension to AspectJ**  
 Arik Hadas, David Lorenz  
