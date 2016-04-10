@@ -86,20 +86,20 @@ Modularity 2015
 
 **Language Oriented Modularity: From Theory to Practice**  
 Student Research Competition, Modularity 2016  
-[<img src="/images/pdf.png" width="25">](/pdfs/src_16.pdf)
-[<img src="/images/pdf.png" width="25">](/pdfs/poster_src_16.pdf)  
+[<img src="/images/pdf.png" width="25">](/slides/src_16.pdf)
+[<img src="/images/pdf.png" width="25">](/slides/poster_src_16.pdf)  
 
 **Toward disposable domain-specific aspect languages**  
 Workshop on Foundations Of Aspect-Oriented Languages 2016  
-[<img src="/images/pdf.png" width="25">](/pdfs/Toward Disposable Domain-Specific Aspect Languages.pdf)
+[<img src="/images/pdf.png" width="25">](/slides/Toward Disposable Domain-Specific Aspect Languages.pdf)
 
 **Toward practical language oriented modularity**  
 Workshop on Language Modularity À La Mode 2016  
-[<img src="/images/pdf.png" width="25">](/pdfs/Toward Practical Language Oriented Modularity.pdf)
+[<img src="/images/pdf.png" width="25">](/slides/Toward Practical Language Oriented Modularity.pdf)
 
 **Application-specific language-oriented modularity: a case study of the ovirt project**  
 Workshop on Modularity Across the System Stack 2016  
-[<img src="/images/pdf.png" width="25">](/pdfs/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)
+[<img src="/images/pdf.png" width="25">](/slides/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)
 
 **Managed conversion of guests to oVirt**  
 KVM Forum 2015  
@@ -119,9 +119,9 @@ Demo session, Modularity 2015
 
 **Moving your Virtual Machines to oVirt with ease**  
 FOSDEM 2015  
-[<img src="/images/pdf.png" width="25">](/pdfs/v2v-fosdem.pdf)
+[<img src="/images/pdf.png" width="25">](/slides/v2v-fosdem.pdf)
 
 **RAM Snapshots in oVirt**  
 CloudOpen Europe 2013  
-[<img src="/images/pdf.png" width="25">](/pdfs/ram_snapshots.pdf)
+[<img src="/images/pdf.png" width="25">](/slides/ram_snapshots.pdf)
 [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=xIhPV66uGo8)  
