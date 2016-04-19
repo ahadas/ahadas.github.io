@@ -128,7 +128,7 @@ Demo session, Modularity 2015
 
 **Moving your Virtual Machines to oVirt with ease**  
 FOSDEM 2015  
-[<img src="/images/pdf.png" width="25">](/slides/v2v-fosdem.pdf)
+[<img src="/images/pdf.png" width="25">](/slides/v2v_fosdem.pdf)
 
 **RAM Snapshots in oVirt**  
 CloudOpen Europe 2013  
