@@ -110,7 +110,8 @@ KVM Forum 2015
 [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=rYrnfduAkU0&nohtml5=False)  
 
 **Demanding First-Class Equality for Domain Specific Aspect Languages**  
-Position papers track, Modularity 2015
+Position papers track, Modularity 2015  
+[<img src="/images/pdf.png" width="25">](/slides/position_15.pdf)
 
 **First Class Domain Specific Aspect Languages**  
 Poster session, Modularity 2015  
@@ -122,7 +123,8 @@ Student Research Competition, Modularity 2015
 [<img src="/images/pdf.png" width="25">](/slides/poster_src_15.pdf)
 
 **A Language Workbench for Implementing Your Favorite Extension to AspectJ**  
-Demo session, Modularity 2015
+Demo session, Modularity 2015  
+[<img src="/images/pdf.png" width="25">](/slides/demo_15.pdf)
 
 **Moving your Virtual Machines to oVirt with ease**  
 FOSDEM 2015  
