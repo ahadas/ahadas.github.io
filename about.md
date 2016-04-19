@@ -113,10 +113,13 @@ KVM Forum 2015
 Position papers track, Modularity 2015
 
 **First Class Domain Specific Aspect Languages**  
-Poster session, Modularity 2015
+Poster session, Modularity 2015  
+[<img src="/images/pdf.png" width="25">](/slides/poster_15.pdf)
 
 **A Language Workbench for Creating Production-Ready Extensions to AspectJ**  
-Student Research Competition, Modularity 2015
+Student Research Competition, Modularity 2015  
+[<img src="/images/pdf.png" width="25">](/slides/src_15.pdf)
+[<img src="/images/pdf.png" width="25">](/slides/poster_src_15.pdf)
 
 **A Language Workbench for Implementing Your Favorite Extension to AspectJ**  
 Demo session, Modularity 2015
