@@ -45,7 +45,7 @@ This work:
   
 * Takes for granted that the monitoring in oVirt hinders its scalability.  
 * Does not change hosts monitoring.  
-* Does not refer to other optimizations that do not improve monitoring of a stable system.
+* Does not refer to other optimizations we did that do not improve monitoring of a stable system.
 
 # Changes
 
