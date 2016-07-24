@@ -16,15 +16,15 @@ In this post the term *monitoring* refers to the mechanism that oVirt-engine, th
 * Statistics such as memory and cpu consumption  
 * Information about devices that are attached to VMs and hosts
 
-## Notable changes in the monitoring unit in the past
+## Notable changes in the monitoring code in the past
 
 ### @UnchangableByVdsm
-Generally speaking, the monitoring components get runtime data reported from the hosts, compares it with the previously known data and process the changes.  
+Generally speaking, the monitoring gets runtime data reported from the hosts, compares it with the previously known data and process the changes.  
 In order to distinguish dynamic data that is reported by the hosts and dynamic data that is not reported by the hosts, we added in oVirt 3.5 an annotation called UnchangableByVdsm that should be put on every field in VmDynamic class that is not expected to be reported by the hosts. This was supposed to eliminate redundant saves of unchanged runtime data to the database.
 
 ### Split hosts-monitoring and VMs-monitoring
-Previously, before monitoring a host we locked the host and released it only after the host-related information and all information of VMs running on the host was processed. As a result, when doing an operation on a running VM, the host that the VM runs on was locked.  
-A major change in oVirt 3.5 was a refactoring the monitoring to use per-VM lock instead of the host lock while processing VM runtime data. That reduced the time that both monitoring and command threads are locked.
+Previously, before monitoring a host we locked the host and released it only after the host-related information and all information of VMs running on the host was processed. As a result, when doing an operation on a running VM, the host that the VM ran on was locked.  
+A major change in oVirt 3.5 was a refactoring the monitoring to use per-VM lock instead of the host lock while processing VM runtime data. That reduced the time that both monitoring and threads executing commands are locked.
 
 ### Introduction of events based protocol with the hosts
 A highly desirable enhancement came in oVirt 3.6 in which changes in VM runtime data are reported as events rather than by polling. In a typical data-center many of the VMs are 'stable', i.e. their status does not change much. In such environment, this change reduces the number of data sent on the wire and reduces the unnecessary processing in oVirt-engine.  
@@ -33,11 +33,11 @@ Note that not all monitoring cycles were replaces with events: on every 15 secon
 ## Scope of this work
 An indication that monitoring is inefficient is when it works hard while the system is stable (I prefer the term 'stable' over 'idle' since the virtual machines could actually be in use). For example, when virtual machnines don't change (no operation is done on these VMs and nothing in their environment is changed), one could expect the monitoring not to do anything except for processing and persisting statistics data (that is likely to change frequently).  
 
-Unfortunately it was not the case in oVirt. The next figure shows the 'self time' of hot-spots in the interaction  with the database in oVirt 3.6 during the time an environment with one host and 6000 VMs was stable for 1 hour. I will elaborate on these number later on, but for now just note that the red color is the overall execution time of DB queries/updates. The more red color we see, the more busy the monitoring is.
+Unfortunately it was not the case in oVirt. The next figure shows the 'self time' of hot-spots in the interaction with the database in oVirt 3.6 during the time an environment with one host and 6000 VMs was stable for one hour. I will elaborate on these number later on, but for now just note that the red color is the overall execution time of database queries/updates. The more red color we see, the more busy the monitoring is.
 
 ![Execution time of DB queries in stable 3.6 environment](http://ahadas.github.io/images/ovirt_scale/3.6-self_time.png)
 
-This work continues the effort to improve the monitoring aspect in oVirt mentioned in the previous sub-section in order to address this problem. In the next section, I elaborate on the changes we did that lead to the reduced execution times shown in the next figure for the same enviroment in 1 hour (look how much less red color!).
+This work continues the effort to improve the monitoring in oVirt mentioned in the previous sub-section in order to address this particular problem. In the next section, I elaborate on the changes we did that lead to the reduced execution times shown in the next figure for the same enviroment and for the same time (look how much less red color!).
 
 ![Execution time of DB queries in stable 4.1 environment](http://ahadas.github.io/images/ovirt_scale/master-self_time.png)
 
@@ -68,16 +68,16 @@ But these queries are called many times so the overall portion of these calls is
 * Getting numa node CPU by VM - 2% (45,918 msec)
 * Getting numa nodes by VM - 2% (45,041 msec)
 
-The surprising thing was that the host did not report any VM related information about numa nodes! So we changed the analysis of VM's data to skip processing (and fetching from the database) numa related data if no such data is reported for a VM.
+I used the term 'wasted' because my host did not report any VM related information about numa nodes! So in order to improve this we changed the analysis of VM's data to skip processing (and fetching from the database) numa related data if no such data is reported for a VM.
 
 ## Memoizing host's numa nodes
-But we cannot assume that hosts do not report numa nodes data for the VMs. So another improvement was to reduce the number of times that host's level numa nodes data is queried - the query it on per-host basis instead of per-VM. That's ok since this data does not change in the meantime. We used the memoization technique to cache this information during host monitoring cycle.
+But we cannot assume that hosts do not report numa nodes data for the VMs. So another improvement was to reduce the number of times it takes to query host's level numa nodes data - by querying it on per-host basis instead of per-VM. That's ok since this data does not change while we process data received from the host. We used the memoization technique to cache this information during host monitoring cycle.
 
 ## Cache VM jobs
 Another surprising finding was to see that we put a not negligible effort in processing and updating VM jobs (that is, jobs that represent live snapshot merges) without having a single job like that (the system is stable, remember?).   
 It gots up to 3.8% (111 sec) of the overall CPU time and 3% (47,140 msec) of the overall database interactions.  
 
-Therefore, another layer of in-memory management of VM jobs was added. Only when this layers detects that information should be retrieved from the database (not all the data is cached) it access the database.
+Therefore, another layer of in-memory management of VM jobs was added. Only when this layers detects that information should be retrieved from the database (and not all the data is cached) it access the database.
 
 ## Reduce number of updates of dynamic VM data
 Despite the use of @UnchangableByVdsm, I discovered that VM dynamic data (that includes for example, its status, ip of client console that is connected to it and so on) is updated. Again, no such update should occur in a stable system... The implications of this issue is significant because this is a per-VM operation so the time it takes is accumulated and in our environment got to 6% (101 sec) of the overall database interactions.
@@ -90,7 +90,7 @@ Hosts report the hash of the devices of each VM and the monitoring of the VMs us
 Therefore, we split the VM devices monitoring into a separate module that caches the device hashes and by that reduce even further the number of updates of VM dynamic data. 
 
 ## Lighter, dedicated monitoring views
-Another observation from analyzing hot spots in the database interactions was that one of the queries we spend a lot of time on is the one for getting the network interface of the monitored VMs. This is relatively cheap query, only 678 micro-sec on average, but it is called per-VM that therefore accumulated to 8% (126 sec) of the overall database interactions.  
+Another observation from analyzing hot spots in the database interactions was that one of the queries we spend a lot of time on is the one for getting the network interface of the monitored VMs. This is a relatively cheap query, only 678 micro-sec on average, but it is called per-VM that therefore accumulated to 8% (126 sec) of the overall database interactions.  
 
 The way to improve it was by introducing another query that is based on a lighter view of network interfaces that contains only the information needed for the monitoring.  
 
@@ -108,16 +108,16 @@ engine=> explain analyze select * from vms_monitoring_view where run_on_vds='043
 This new view is used by the monitoring in oVirt 4.0 but as we will see later on the monitoring in oVirt 4.1 won't use it anymore. Still, this new view is used in several other places instead of the costly 'vms' view.
 
 ## In-memory management of VM statistics
-The main argument for persisting data into a database is its ability to store information that should be recoverable after restart of the application. However, in oVirt the database is many times used to share data between threads and processes. This badly affects performance.  
+The main argument for persisting data into a database is its ability to store information that should be recoverable after restart of the application. However, in oVirt the database is many times used in order to share data between threads and processes. This badly affects performance.  
 
 VM statistics is a type of data that is not supposed to be recoverable after restart of the application. Thus, one could expect it not to be persisted in the database. But in order share the statistics with thread that queries VMs for clients and with DWH, it used to be persisted.  
 
-As part of this work, VM statistics is no longer persisted into the database. They are now managed in-memory. Threads that query VMs for clients retrieve it from the memory, and for DWH we can dump the statistics in longer intervals to wherever it takes the statistics from. By not persisting the statistics, the number of saves to the database it reduced. In our environment it got to 2% (38,669 msec) of the overall database interactions. It also reduce the time it takes to query all VMs for clients.
+As part of this work, VM statistics is no longer persisted into the database. They are now managed in-memory. Threads that query VMs for clients retrieve it from the memory, and for DWH we can dump the statistics in longer intervals to wherever it takes the statistics from. By not persisting the statistics, the number of saves to the database it reduced. In our environment it got to 2% (38,669 msec) of the overall database interactions. It also reduces the time it takes to query VMs for clients.
 
 ## Query only VM dynamic data for VM analysis
-So 'vms_monitoring_view' turned to be much more efficient than 'vms' view as it returned only statistics, dynamic and static information of the VM (without additional information that is stored in different tables).  
+So 'vms\_monitoring\_view' turned out to be much more efficient than 'vms' view as it returned only statistics, dynamic and static information of the VM (without additional information that is stored in different tables).  
 
-But obviously querying only the dynamic data is much more efficient than using vms\_monitoring\_view:  
+But obviously querying only the dynamic data is much more efficient than using the vms\_monitoring\_view:  
 
 ```
 engine=> explain analyze select * from vms_monitoring_view where run_on_vds='043f5638-f461-4d73-b62d-bc7ccc431429';
@@ -141,14 +141,14 @@ CPU view on oVirt 3.6:
 CPU view on oVirt master:  
 ![CPU view on master](http://ahadas.github.io/images/ovirt_scale/master-cpu.png)
 
-* The total CPU time used over an hour for the monitoring reduced from 2297 sec to 1789 sec.
+* The total CPU time used in one hour for the monitoring reduced from 2297 sec to 1789 sec.
 * We spend significantly less time in the monitoring code - 814 sec instead of 1451 sec.
- * The processing time reduced from 896 sec to 687 sec.
- * The time it takes to persist changes to the database reduced from 546 sec to 114 sec.
+  * The processing time reduced from 896 sec to 687 sec.
+  * The time it takes to persist changes to the database reduced from 546 sec to 114 sec.
 
 Additional insight:
 
-* The time spent on host monitoring increased a bit from 40,730 msec to 53,447 msec while it includes the use of 'vms\_monitoring\_view'. Thus, in 4.0 it is probably even higher due to additional operations that were added.
+* The time spent on host monitoring increased from 40,730 msec in oVirt 3.6 to 53,447 msec when using 'vms\_monitoring\_view'. Thus, in 4.0 it is probably even higher due to additional operations that were added.
 
 ## Database
 Database hot spots on oVirt 3.6:  
@@ -161,15 +161,15 @@ Database hot spots on oVirt master:
 * The time it takes to query all the running VMs on the host reduced from 3,539 msec on average (!) to 909 msec, resulting in overall improvement from 113 sec to 59,130 msec thanks to querying only the dynamic data.
 * The time it took to save the dynamic data of the VMs was 101 sec (6%, 544 micro-sec on average). On master, the dynamic data was not saved at all.
 * All queries for numa nodes that were described before were not called on our environment.
-* Same for the query for VM jobs.
+* Same for the query of VM jobs.
 * The update of VM statistics which took 261 micro-sec and 38,669 msec overall (2%) on oVirt 3.6, is not called anymore.
 * Queries related to guest agent data on network interfaces that we spend time on in oVirt 3.6 (insert: 319 micro-sec on average, 59,493 msec overall which is 3% and delete: 223 micro-sec on average, 41,605 msec overall which is 2%) were not called on oVirt master.
 
 More insights:
 
-* Despite making the 'regular' VMs query lighter (since it does not include taking VM statistics from the database), it takes significatly more time on oVirt master: 996 msec on average while it used to be ~570 msec on average on oVirt 3.6.
-* Updates of the dynamic data of disks is inefficient, although it is relatively cheap (143 micro-sec on average) the fact that it is per-VM makes the overall time relatively high on master (4%), especially considering that these VMs had no disks..
-* The overall time spent on querying VM network interfaces is still too long.
+* Despite making the 'regular' VMs query lighter (since it does not include querying VM statistics from the database), it takes significatly more time on oVirt master: 996 msec on average while it used to be ~570 msec on average on oVirt 3.6.
+* Updates of the dynamic data of disks seems to be also inefficient. Although it is relatively cheap (143 micro-sec on average) operation, the fact that it is done per-VM makes the overall time relatively high on master (4%), especially considering that these VMs had no disks..
+* The overall time spent on querying VM network interfaces is still too much.
 * An insight that I find hard to explain is the following diagrams of the executed database statements that are probably a result of caching in postgres (that might explain the reduced memory consumption we will see later):  
 
 Executed statements in oVirt 3.6:  
@@ -185,17 +185,17 @@ Memory consumption on oVirt 3.6:
 Memory consumption on oVirt master:  
 ![memory on master](http://ahadas.github.io/images/ovirt_scale/master-memory.png)
 
-One can argue that in-memory management like the one introduced for VM statistics or in-memory management layers over the database like the one introduced for VM jobs can result in high memory consumption.  
+One can argue that in-memory management like the one introduced for VM statistics or in-memory management layers over the database like the one introduced for VM jobs leads to high memory consumption.  
 
-Surprisingly, the memory consumption on master is lower than the one seen on 3.6. While at peaks (right before the garbage collector clean it) the memory on oVirt 3.6 get to ~1.45 GB, on oVirt master it gets to ~1.2 GB. That is probably thanks to other improvements that compansate the higher memory consumption by the monitoring.
+Surprisingly, the memory consumption on master is lower than the one seen on 3.6. While at peaks (right before the garbage collector clean it) the memory on oVirt 3.6 get to ~1.45 GB, on oVirt master it gets to ~1.2 GB. That is probably thanks to other improvements or by reducing the amount of caching by postgres that compansate the higher memory consumption by the monitoring.
 
 # Possible future work
 
-* Although I refer to the findings with all the changes as master branch, some of them are not yet merged so this work is not completed yet.
-* Need to investigate what makes VM query to take much longer on the master branch.
+* Although I refer to the code that includes the described changes as 'master branch', some of the changes are not yet merged so this work is not completed yet.
+* Need to investigate what makes VMs query to take much longer on the master branch.
 * Another improvement can be to replace the 'statistics cycles' polling with events. This could also prevent theoretical issues we currently have in the monitoring code.
-* In order to create the testing environment I played a bit with environment running 6000 VMs (using fake-VDSM). It is very inconvenient via the webadmin currently. Better UI support for batch operations for batch operations is something to consider.
-* Also, there was an effort to introduce batch operations for operations on the hosts (like Run VM). We might want to consider batch scheduling that will allow us to resume that effort.
+* In order to create the testing environment I played a bit with environment running 6000 VMs (using fake-VDSM). It is very inconvenient via the webadmin currently. Better UI support for batch operations is something to consider.
+* Also, we had an effort to introduce batch operations for operations on the hosts (like Run VM). We might want to consider batch scheduling that will allow us to resume that effort.
 * Introduce in-memory layers for network interface and dynamic disk data as well.
 * Split VM dynamic data to runtime data, that is reported by VDSM, and other kind of data to prevent redundant updates from happening again.
 * Cache VM dynamic data. We planned to do it for VM statuses, but we should consider doing that for other kind of dynamic VM data.
