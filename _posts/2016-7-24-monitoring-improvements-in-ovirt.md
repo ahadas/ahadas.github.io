@@ -112,7 +112,7 @@ The main argument for persisting data into a database is its ability to store in
 
 VM statistics is a type of data that is not supposed to be recoverable after restart of the application. Thus, one could expect it not to be persisted in the database. But in order share the statistics with thread that queries VMs for clients and with DWH, it used to be persisted.  
 
-As part of this work, VM statistics is no longer persisted into the database. They are now managed in-memory. Threads that queries VMs for clients retrieve it from the memory, and DWH is not supported anymore. By not persisting the statistics, the number of saves to the database it reduced. In our environment it got to 2% (38,669 msec) of the overall database interactions. It also reduce the time it takes to query all VMs for clients.
+As part of this work, VM statistics is no longer persisted into the database. They are now managed in-memory. Threads that query VMs for clients retrieve it from the memory, and DWH is not supported anymore. By not persisting the statistics, the number of saves to the database it reduced. In our environment it got to 2% (38,669 msec) of the overall database interactions. It also reduce the time it takes to query all VMs for clients.
 
 ## Query only VM dynamic data for VM analysis
 So 'vms_monitoring_view' turned to be much more efficient than 'vms' view as it returned only statistics, dynamic and static information of the VM (without additional information that is stored in different tables).  
