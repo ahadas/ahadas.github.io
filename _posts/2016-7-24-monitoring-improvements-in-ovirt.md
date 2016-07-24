@@ -170,7 +170,7 @@ More insights:
 * Despite making the 'regular' VMs query lighter (since it does not include taking VM statistics from the database), it takes significatly more time on oVirt master: 996 msec on average while it used to be ~570 msec on average on oVirt 3.6.
 * Updates of the dynamic data of disks is inefficient, although it is relatively cheap (143 micro-sec on average) the fact that it is per-VM makes the overall time relatively high on master (4%), especially considering that these VMs had no disks..
 * The overall time spent on querying VM network interfaces is still too long.
-* An insight that I find it hard to explain is the following diagrams of the executed DB statements that are probably a result of caching in postgres (that might explain the reduced memory consumption we will see later):  
+* An insight that I find hard to explain is the following diagrams of the executed database statements that are probably a result of caching in postgres (that might explain the reduced memory consumption we will see later):  
 
 Executed statements in oVirt 3.6:  
 ![db statements on 3.6](http://ahadas.github.io/images/ovirt_scale/3.6-statements.png)
