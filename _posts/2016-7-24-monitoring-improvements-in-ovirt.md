@@ -33,13 +33,13 @@ An indication that monitoring is inefficient is when it does too many things whi
 
 Unfortunately it was not the case in oVirt. Figure 1 shows the 'self time' of hot-spots in the interaction  with the database in oVirt 3.6 during the time an environment with one host and 6000 VMs was stable. I will elaborate on these number later on, but for now just note that the red color is the overall execution time of DB queries/updates. The more red color we see, the more busy the monitoring is.
 
-![Figure 1 - Execution time of DB queries in stable 3.6 environment](images/ovirt_scale/3.6-self_time.png)
+![Figure 1 - Execution time of DB queries in stable 3.6 environment](http://ahadas.github.io/images/ovirt_scale/3.6-self_time.png)
 
 This work continutes the effort to improve the monitoring aspect in oVirt mentioned in the previous sub-section in order to address this problem. In the next section, I elaborate on the changes we did that lead to the reduced execution times shown in Figure 2 (look how much less red color!).
 
-![Figure 2 - Execution time of DB queries in stable 4.1 environment](images/ovirt_scale/master-self_time.png)
+![Figure 2 - Execution time of DB queries in stable 4.1 environment](http://ahadas.github.io/images/ovirt_scale/master-self_time.png)
 
 This work:  
 * Takes for granted that the monitoring in oVirt hinders its scalability.  
 * Does not address hosts monitoring (but only VMs monitoring).  
-* Does not refer to other optimizations we did that do not improve monitoring of a stable system.
+* Does not refer to other optimizations that do not improve monitoring of a stable system.
