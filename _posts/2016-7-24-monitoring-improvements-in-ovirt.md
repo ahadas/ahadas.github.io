@@ -127,7 +127,7 @@ engine=> explain analyze select * from vm_dynamic where run_on_vds='043f5638-f46
  Planning time: 0.109 ms
  Execution time: 2.703 ms
 ```
-So as part of this work, not only that VM statistics are no longer queried from the database but also the static VM data is no longer queried from the database by the monitoring. Each update is done through VmManager that caches only the information needed by the monitoring and the monitoring uses this data instead of queryiing the database. That way, only the dynamic data is queried from the database.
+So as part of this work, not only that VM statistics are no longer queried from the database but also the static data of the VM is no longer queried from the database by the monitoring. Each update is done through VmManager that caches only the information needed by the monitoring and the monitoring uses this data instead of queryiing the database. That way, only the dynamic data is queried from the database.
 
 ## Eliminate redundant queries by VM pools monitoring
 Not directly related to VMs monitoring, VM pool monitoring that is responsible for running prestarted VMs also affects the work done in a stable system. As part of this work, the amount of interactions with the database by VM pool monitoring in system that doesn't contain prestarted VMs was reduced.
