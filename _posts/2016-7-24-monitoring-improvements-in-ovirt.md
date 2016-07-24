@@ -37,7 +37,7 @@ Unfortunately it was not the case in oVirt. The next figure shows the 'self time
 
 ![Execution time of DB queries in stable 3.6 environment](http://ahadas.github.io/images/ovirt_scale/3.6-self_time.png)
 
-This work continutes the effort to improve the monitoring aspect in oVirt mentioned in the previous sub-section in order to address this problem. In the next section, I elaborate on the changes we did that lead to the reduced execution times shown in the next figure for the same enviroment in 1 hour (look how much less red color!).
+This work continues the effort to improve the monitoring aspect in oVirt mentioned in the previous sub-section in order to address this problem. In the next section, I elaborate on the changes we did that lead to the reduced execution times shown in the next figure for the same enviroment in 1 hour (look how much less red color!).
 
 ![Execution time of DB queries in stable 4.1 environment](http://ahadas.github.io/images/ovirt_scale/master-self_time.png)
 
