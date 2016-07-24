@@ -3,7 +3,7 @@ layout: post
 title: Monitoring Improvements in oVirt
 ---
 
-Recently I've been working on improving the scalability of monitoring in oVirt. That is, how to make oVirt-engine, the central management unit in the oVirt management system, able to process and report changes in a growing number of virtual machines that are running in a data-center. In this post I elaborate on the changes that were done and share some measurements.  
+Recently I've been working on improving the scalability of monitoring in oVirt. That is, how to make oVirt-engine, the central management unit in the oVirt management system, able to process and report changes in a growing number of virtual machines that are running in a data-center. In this post I elaborate on what we did and share some measurements.  
 
 # Background
 
@@ -19,7 +19,7 @@ In this post the term *monitoring* refers to the mechanism that oVirt-engine, th
 ## Notable changes in the monitoring unit in the past
 
 ### @UnchangableByVdsm
-Generally speaking, the monitoring components get runtime date reported from the hosts, compares it with the previously known data and process the changes.  
+Generally speaking, the monitoring components get runtime data reported from the hosts, compares it with the previously known data and process the changes.  
 In order to distinguish dynamic data that is reported by the hosts and dynamic data that is not reported by the hosts, we added in oVirt 3.5 an annotation called UnchangableByVdsm that should be put on every field in VmDynamic class that is not expected to be reported by the hosts. This was supposed to eliminate redundant saves of unchanged runtime data to the database.
 
 ### Split hosts-monitoring and VMs-monitoring
@@ -130,7 +130,7 @@ engine=> explain analyze select * from vm_dynamic where run_on_vds='043f5638-f46
 So as part of this work, not only that VM statistics are no longer queried from the database but also the static data of the VM is no longer queried from the database by the monitoring. Each update is done through VmManager that caches only the information needed by the monitoring and the monitoring uses this data instead of queryiing the database. That way, only the dynamic data is queried from the database.
 
 ## Eliminate redundant queries by VM pools monitoring
-Not directly related to VMs monitoring, VM pool monitoring that is responsible for running prestarted VMs also affects the work done in a stable system. As part of this work, the amount of interactions with the database by VM pool monitoring in system that doesn't contain prestarted VMs was reduced.
+Not directly related to VMs monitoring, VM pool monitoring that is responsible for running prestarted VMs also affects the amount of work done in a stable system. As part of this work, the amount of interactions with the database by VM pool monitoring in system that doesn't contain prestarted VMs was reduced.
 
 # Results
 
