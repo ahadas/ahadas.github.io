@@ -10,7 +10,8 @@ Recently I've been working on improving the scalability of monitoring in oVirt. 
 ## Monitoring in oVirt
 In short, [oVirt](http://ovirt.org) is an open-source management platform for virtual data-centers. It allows centralized management of a distributed system of virtual machines, compute, storage and networking resources.
 
-In this post the tern *monitoring* refers to the mechanism that oVirt-engine, the central component in the oVirt distributed system, collects runtime data from hosts that virtual machines are running on and reports it to clients. Some examples of such runtime data:  
+In this post the term *monitoring* refers to the mechanism that oVirt-engine, the central component in the oVirt distributed system, collects runtime data from hosts that virtual machines are running on and reports it to clients. Some examples of such runtime data:
+
 * Statuses of hosts and VMs  
 * Statistics such as memory and cpu consumption  
 * Information about devices that are attached to VMs and hosts
@@ -30,7 +31,7 @@ A highly desirable enhancement came in oVirt 3.6 in which changes in VM runtime 
 Note that not all monitoring cycles were replaces with events: on every 15 seconds (by default), oVirt-engine still polls the statuses of all VMs, including their statistics. These cycles are called 'statistics cycles'.
 
 ## Scope of this work
-An indication that monitoring is inefficient is when it does too many things while the system is stable (I prefer the term 'stable' over 'idle' since the virtual machines could actually be in use). For example, when virtual machnines don't change (no operation is done on these VMs and nothing in their environment is changed), one could expect the monitoring not to do anything except for processing and persisting statistics data (that is likely to change frequently).  
+An indication that monitoring is inefficient is when it works hard while the system is stable (I prefer the term 'stable' over 'idle' since the virtual machines could actually be in use). For example, when virtual machnines don't change (no operation is done on these VMs and nothing in their environment is changed), one could expect the monitoring not to do anything except for processing and persisting statistics data (that is likely to change frequently).  
 
 Unfortunately it was not the case in oVirt. The next figure shows the 'self time' of hot-spots in the interaction  with the database in oVirt 3.6 during the time an environment with one host and 6000 VMs was stable for 1 hour. I will elaborate on these number later on, but for now just note that the red color is the overall execution time of DB queries/updates. The more red color we see, the more busy the monitoring is.
 
@@ -40,9 +41,10 @@ This work continutes the effort to improve the monitoring aspect in oVirt mentio
 
 ![Execution time of DB queries in stable 4.1 environment](http://ahadas.github.io/images/ovirt_scale/master-self_time.png)
 
-This work:  
+This work:
+  
 * Takes for granted that the monitoring in oVirt hinders its scalability.  
-* Does not address hosts monitoring (but only VMs monitoring).  
+* Does not change hosts monitoring.  
 * Does not refer to other optimizations that do not improve monitoring of a stable system.
 
 # Changes
@@ -51,6 +53,7 @@ This work:
 We saw that a significant effort was put to process runtime data of numa nodes.  
 In terms of CPU time, 8.1% (which is 235 seconds) was wasted on getting all numa nodes of the host from the database and 5.9% (which is 170 seconds) was wasted on getting all numa nodes of VMs from the database. The overall CPU time spent on processing numa node data got up to 14.6%! This finding is similar to what we saw in profiling dump we got for other scaled environment.  
 In terms of database interaction, getting this information is relatively cheap (the following are average numbers in micro-seconds):  
+
 * 261 to get numa nodes by host  
 * 259 to get assigned numa nodes  
 * 255 to get numa node CPU by host  
@@ -58,6 +61,7 @@ In terms of database interaction, getting this information is relatively cheap (
 * 242 to get numa nodes by VM
 
 But these queries are called many times so the overall portion of these calls is significant:  
+
 * Getting numa nodes by host - 3% (48,546 msec)
 * Getting assigned numa nodes - 3% (48,201 msec)
 * Getting numa node CPU by host - 3% (47,569 msec)
@@ -129,3 +133,57 @@ So as part of this work, not only that VM statistics are no longer queried from 
 Not directly related to VMs monitoring, VM pool monitoring that is responsible for running prestarted VMs also affects the work done in a stable system. As part of this work, the amount of interactions with the database by VM pool monitoring in system that doesn't contain prestarted VMs was reduced.
 
 # Results
+
+## CPU
+CPU view on oVirt 3.6:  
+![CPU view on 3.6](http://ahadas.github.io/images/ovirt_scale/3.6-cpu.png)
+
+CPU view on oVirt master:  
+![CPU view on master](http://ahadas.github.io/images/ovirt_scale/master-cpu.png)
+
+* The total CPU time used over an hour for the monitoring reduced from 2297 sec to 1789 sec.
+* We spend significantly less time in the monitoring code - 814 sec instead of 1451 sec.
+ * The processing time reduced from 896 sec to 687 sec.
+ * The time it takes to persist changes to the database reduced from 546 sec to 114 sec.
+
+Additional insight:
+
+* The time spent on host monitoring increased a bit from 40,730 msec to 53,447 msec while it includes the use of 'vms\_monitoring\_view'. Thus, in 4.0 it is probably even higher due to additional operations that were added.
+
+## Database
+Database hot spots on oVirt 3.6:  
+![DB hot-spots on 3.6](http://ahadas.github.io/images/ovirt_scale/3.6-db.png)
+
+Database hot spots on oVirt master:  
+![DB hot-spots on master](http://ahadas.github.io/images/ovirt_scale/master-db.png)
+
+* The time to query network interfaces of VM reduced from 678 micro-sec on average to 282 micro-sec, resulting in overall improvement from 126 sec to 108 sec (it is called much more, I believe it is because postgres caches this differently now).
+* The time it takes to query all the running VMs on the host reduced from 3,539 msec on average (!) to 909 msec, resulting in overall improvement from 113 sec to 59,130 msec thanks to querying only the dynamic data.
+* The time it took to save the dynamic data of the VMs was 101 sec (6%, 544 micro-sec on average). On master, the dynamic data was not saved at all.
+* All queries for numa nodes that were described before were not called on our environment.
+* Same for the query for VM jobs.
+* The update of VM statistics which took 261 micro-sec and 38,669 msec overall (2%) on oVirt 3.6, is not called anymore.
+* Queries related to guest agent data on network interfaces that we spend time on in oVirt 3.6 (insert: 319 micro-sec on average, 59,493 msec overall which is 3% and delete: 223 micro-sec on average, 41,605 msec overall which is 2%) were not called on oVirt master.
+
+More insights:
+
+* Despite making the 'regular' VMs query lighter (since it does not include taking VM statistics from the database), it takes significatly more time on oVirt master: 996 msec on average while it used to be ~570 msec on average on oVirt 3.6.
+* Updates of the dynamic data of disks is inefficient, although it is relatively cheap (143 micro-sec on average) the fact that it is per-VM makes the overall time relatively high on master (4%), especially considering that these VMs had no disks..
+* The overall time spent on querying VM network interfaces is still too long.
+* An insight that I find it hard to explain is the following diagrams of the executed DB statements that are probably a result of caching in postgres (that might explain the reduced memory consumption we will see later):  
+Executed statements in oVirt 3.6:  
+![db statements on 3.6](http://ahadas.github.io/images/ovirt_scale/3.6-statements.png)
+
+Executed statements in oVirt master:  
+![memory on master](http://ahadas.github.io/images/ovirt_scale/master-statements.png)
+
+## Memory
+Memory consumption on oVirt 3.6:  
+![memory on 3.6](http://ahadas.github.io/images/ovirt_scale/3.6-memory.png)
+
+Memory consumption on oVirt master:  
+![memory on master](http://ahadas.github.io/images/ovirt_scale/master-memory.png)
+
+One can argue that in-memory management like the one introduced for VM statistics or in-memory management layers over the database like the one introduced for VM jobs can result in high memory consumption.  
+
+Surprisingly, the memory consumption on master is lower than the one seen on 3.6. While at peaks (right before the garbage collector clean it) the memory on oVirt 3.6 get to ~1.45 GB, on oVirt master it gets to ~1.2 GB. That is probably thanks to other improvements that compansate the higher memory consumption by the monitoring.
