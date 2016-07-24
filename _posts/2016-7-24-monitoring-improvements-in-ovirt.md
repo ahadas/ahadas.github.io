@@ -187,7 +187,7 @@ Memory consumption on oVirt master:
 
 One can argue that in-memory management like the one introduced for VM statistics or in-memory management layers over the database like the one introduced for VM jobs leads to high memory consumption.  
 
-Surprisingly, the memory consumption on master is lower than the one seen on 3.6. While at peaks (right before the garbage collector clean it) the memory on oVirt 3.6 get to ~1.45 GB, on oVirt master it gets to ~1.2 GB. That is probably thanks to other improvements or by reducing the amount of caching by postgres that compansate the higher memory consumption by the monitoring.
+Surprisingly, the memory consumption on master is lower than the one seen on 3.6. While at peaks (right before the garbage collector cleans it) the memory on oVirt 3.6 get to ~1.45 GB, on oVirt master it gets to ~1.2 GB. That is probably thanks to other improvements or by reducing the amount of caching by postgres that compansate the higher memory consumption by the monitoring.
 
 # Possible future work
 
@@ -195,7 +195,7 @@ Surprisingly, the memory consumption on master is lower than the one seen on 3.6
 * Need to investigate what makes VMs query to take much longer on the master branch.
 * Another improvement can be to replace the 'statistics cycles' polling with events. This could also prevent theoretical issues we currently have in the monitoring code.
 * In order to create the testing environment I played a bit with environment running 6000 VMs (using fake-VDSM). It is very inconvenient via the webadmin currently. Better UI support for batch operations is something to consider.
-* Also, we had an effort to introduce batch operations for operations on the hosts (like Run VM). We might want to consider batch scheduling that will allow us to resume that effort.
+* Also, we had an effort to introduce batch operations for operations on the hosts (like Run VM). We could consider batch scheduling that will allow us to resume that effort.
 * Introduce in-memory layers for network interface and dynamic disk data as well.
 * Split VM dynamic data to runtime data, that is reported by VDSM, and other kind of data to prevent redundant updates from happening again.
 * Cache VM dynamic data. We planned to do it for VM statuses, but we should consider doing that for other kind of dynamic VM data.
