@@ -16,6 +16,7 @@ In this post the tern *monitoring* refers to the mechanism that oVirt-engine, th
 * Information about devices that are attached to VMs and hosts
 
 ## Notable changes in the monitoring unit in the past
+
 ### @UnchangableByVdsm
 Generally speaking, the monitoring components get runtime date reported from the hosts, compares it with the previously known data and process the changes.  
 In order to distinguish dynamic data that is reported by the hosts and dynamic data that is not reported by the hosts, we added in oVirt 3.5 an annotation called UnchangableByVdsm that should be put on every field in VmDynamic class that is not expected to be reported by the hosts. This was supposed to eliminate redundant saves of unchanged runtime data to the database.
