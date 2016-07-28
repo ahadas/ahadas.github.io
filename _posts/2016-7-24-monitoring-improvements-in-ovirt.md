@@ -77,7 +77,7 @@ But we cannot assume that hosts do not report numa nodes data for the VMs. So an
 Another surprising finding was to see that we put a not negligible effort in processing and updating VM jobs (that is, jobs that represent live snapshot merges) without having a single job like that (the system is stable, remember?).   
 It gots up to 3.8% (111 sec) of the overall CPU time and 3% (47,140 msec) of the overall database interactions.  
 
-Therefore, another layer of in-memory management of VM jobs was added. Only when this layers detects that information should be retrieved from the database (and not all the data is cached) it access the database.
+Therefore, another layer of in-memory management of VM jobs was added. Only when this layer detects that information should be retrieved from the database (and not all the data is cached) it access the database.
 
 ## Reduce number of updates of dynamic VM data
 Despite the use of @UnchangableByVdsm, I discovered that VM dynamic data (that includes for example, its status, ip of client console that is connected to it and so on) is updated. Again, no such update should occur in a stable system... The implications of this issue is significant because this is a per-VM operation so the time it takes is accumulated and in our environment got to 6% (101 sec) of the overall database interactions.
