@@ -8,8 +8,8 @@ I am a software engineer at [Red Hat](https://www.redhat.com) and a graduate stu
 
 I live in Tel-Aviv, Israel.
 
-# On-Going Projects
-Following are the projects I work on.  
+# Projects
+Following are the projects I work on nowadays or worked on in the past.  
 More information about my open source contributions is available on [Open HUB](https://www.openhub.net/accounts/Arik_Hadas/).
 
 ## oVirt {#ovirt}
