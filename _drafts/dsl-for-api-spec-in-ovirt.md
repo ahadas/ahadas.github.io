@@ -120,15 +120,15 @@ And `VmService` can be defined like this:
 ```
 "This service manages a specific virtual machine."
 Service VmService : MeasurableService {
-	"This operation will start the virtual machine managed by this
-     service, if it isn't already running."
-	Start {
-		"Specifies if the virtual machine should be started in pause
-         mode. It is an optional parameter, if not given then the
-         virtual machine will be started normally."
-		In paused :: Boolean;
-	}
-	...
+"This operation will start the virtual machine managed by
+ this service, if it isn't already running."
+Start {
+"Specifies if the virtual machine should be started in pause
+ mode. It is an optional parameter, if not given then the
+ virtual machine will be started normally."
+In paused :: Boolean;
+}
+...
 }
 ```
 
@@ -140,11 +140,51 @@ The language definition can be found [here](https://github.com/ahadas/ovirt-engi
 
 As a proof of concept, the `Vm` entity and `VmService` service were transformed into their Java counterparts mentioned before. This transformation that was written in Xtend, a programming languages provided by Xtext, can be found [here](https://github.com/ahadas/ovirt-engine-api-lang/blob/master/org.ovirt.api.model/src/org/ovirt/api/model/generator/SpecGenerator.xtend). Note that in production it would be better to transform them directly into the target representation of the specification without the transformation into the internal DSL. The full definition of `Vm` and `VmService` can be found [here](https://github.com/ahadas/ovirt-engine-api-model/blob/master/ovirt-engine-api-model/src/Vm.ospec) and [here](https://github.com/ahadas/ovirt-engine-api-model/blob/master/ovirt-engine-api-model/src/VmService.ospec) (and the generated [here](https://github.com/ahadas/ovirt-engine-api-model/blob/master/ovirt-engine-api-model/src-gen/types/Vm.java) and [here](https://github.com/ahadas/ovirt-engine-api-model/blob/master/ovirt-engine-api-model/src-gen/services/VmService.java)).
 
-# Discussion
-<!-- documentation guys do not need to know java -->
-<!-- Boilerplate_code -->
+# Why is External DSL Better
+So what is the big deal between using the internal DSL vs using the external DSL you may ask. Their syntax is quite similar and the latter does not provide one with the ability to express something he cannot express with the former. I will point out the benefits of using the external DSL by addressing things that came up on the session I mentioned at the beginning and from my own experience with working with both languages.  
+
+The argument for basing the presented language on Java (and by that making it an internal DSL) was that it was done this way in order to leverage Java tools. But as we have seen before, the same capabilities can also be achieved for an external DSL by using a language workbench.  
+
+In the mentioned session one asked whether the language itself or the tools developed for it (for its transformation I believe) can be reused by other projects. The answer was positive. Questions about reuse are often raised in order to find a way to reduce the amortized development cost. However, when using a proper language workbench, one uses third-party tools for the language definition and its transformation that significantly simplify the language development, making it (typically) cost-effective even for one-time use. By taking reusability out of the equation, the language can be kept minimal and optimal for the particular instance of the problem at hand.  
+
+The presenter showed an example for adding a color to the `Vm` entity. One guy asked if we can use the type `byte` for the RGB values of the color instead of an `int`. The answer was negative. This is an example for the downside of basing the language on Java - one may try to use any type provided by Java. In contrast, the external DSL provides only the supported types. Note: yet, one can easiliy define that a particular field can be of any Java type, if needed.  
+
+That example exposed another downside of the internal DSL. The presenter typed most of the definition of the color without specifying a comment for that field. Then he asked "is something missing?" and although that question seemed suspicious, most of the crowed answered that nothing is missing. Documentation is optional and is easy to forget. The fact that documentation is represented in the internal DSL as Javadoc comments that are optional could make one reach the code review phase without a required comment. In the external DSL, however, documentation is part of the language and thus lack of documentation will produce an error by the IDE (without any checkstyle or other plugin), making it impossible to forget to document.  
+
+Another question was: why should we using the `@Type` and `@Service` annotations while we can retrive that information from the package the file is located in (either `types` or `services`)? I think his question can be generalized to "how can we reduce the boilerplate code?". Looking at code written in the internal DSL, we see a redundant syntax that is repeated again and again: the visibility of the types and services, the `interface` keyword near every action in a service, empty parenthesis near every property of a data type and so on. In contrast, we see much less boilerplate code in code written in the external DSL.  
+
+Moreover, having the language less coupled with Java makes it easier to work with for non-programmers. Typically, ones that mainly work on documentation are not programmers. Simplifying the grammar and making it more declarative (specifically the documentation part as we will discuss next) making it easier for them to contribute.  
+
+And lastly, besides being optional, the fact that Javadoc comments have no clear structure makes it difficult to understand the expected format of the documentation. For example, one is expected to write the date and status of a comment he adds/modifies. It is easy to forget to write the date and unless the reviewers catches it, comments can be merged without specifying their date or typing it incorrectly (having @data instead of @date for instance). As for the status, not only that it is easy to forget to specify it, it is unclear what are the allowed values for comment status. Unlike the internal DSL, the external DSL provides a clear structure for comments as part of the language, enforcing developers to provide all the required values and reduce the chances for issues that caused by typos. An example for a structured comment in the external DSL:
+
+```
+summary: 'This operation stops any migration of a virtual machine to another physical host.'
+description: '
+[source]
+----
+POST /ovirt-engine/api/vms/123/cancelmigration
+----
+
+The cancel migration action does not take any action specific parameters,
+so the request body should contain an empty `action`:
+
+[source,xml]
+----
+<action/>
+----
+'
+author: 'Arik Hadas <ahadas@redhat.com>'
+date: '14 Sep 2016'
+status: added
+CancelMigration {
+ 'Indicates if the migration should cancelled asynchronously.'
+ In async :: Boolean; 
+}
+```
+
+One downside of using an external DSL is that we will require contributers to use an IDE plugin for programming with the external DSL. On the other hand, language workbenches like Xtext are able to produce plugins for mainstream IDEs and mechanisms like Eclipe's update-site that ease the installation of these plugins can be provided.  
 
 # Conclusion
-The advanced language workbenches available today greatly improve the attractiveness of external DSLs. One is able to program with languages that typically better fit for the problems at hand compared to general purpose language and internal DSLs, and without suffering from the traditional high effort that was needed for creating them and lack of tools for programming with them.  
+The advanced language workbenches available today greatly improve the attractiveness of external DSLs. One is able to program with languages that typically better fit for the problems at hand compared to general purpose languages and internal DSLs without the high effort that was traditionally needed to create them and program with them due to lack of tools.  
 
-I believe that the use of external DSL for the API specification in oVirt, as the one presented in this post, can be cost-effective and take the improvements presented in version 4 of the API specification one step forward into an even better solution. 
+This post presents an external DSL for the API specification of oVirt that was partially implemented using the Xtext language workbench. Hopefully this post would interest people that work on oVirt's API specification and push them toward giving a chance for using such a language instead of the internal DSL that was introduced in version 4 of the API specification.
