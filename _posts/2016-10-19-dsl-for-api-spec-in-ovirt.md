@@ -14,7 +14,7 @@ Doman specific language (DSL) is a programming language that is tailored to a pa
 The concept of DSLs is not new. Most probably, if you are a developer you have already programmed with a DSL. Some notable examples of DSLs are: HTML for creating webpages, SQL for interaction with databases and MATLAB for matrix programming.  
 
 ## Internal vs External DSL
-Martin Fowler [distinguishes between two types of DSLs](http://martinfowler.com/books/dsl.html): internal and external. Internal DSL is a particular form of API in a host general purpose language (e.g., fluent API/interfaces), while external DSL is parsed independently and not as part of a host language.  
+Martin Fowler [distinguishes between two types of DSLs](http://martinfowler.com/books/dsl.html): internal and external. Internal DSL is a particular form of API in a host general purpose language (e.g., fluent API), while external DSL is parsed independently and not as part of a host language.  
 
 There is a clear trade-off between using internal and external DSLs. On the one hand, it is generally easier to create internal DSLs since one can leverage the parser and compilation tools of the host language. Moreover, one can leverage editing tools intended for the host language while programming with the internal DSL. On the other hand, internal DSLs are limited by the syntax and structure of the host language, which often results in more complicated languages to program with compared to external DSLs.  
 
