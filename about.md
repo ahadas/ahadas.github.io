@@ -34,7 +34,7 @@ I upgraded Awesome to latest versions of AspectJ and extended it to support [exp
 The code is available at [GitHub](https://github.com/OpenUniversity).
 
 # Research
-Surprisingly, although aspect-oriented programming (AOP) is a known as a programming paradigm that promotes better modularization of crosscutting-concerns, it is underutilized in real-world projects that suffer from crosscutting-concerns. As part of my MSc thesis I have been researching new approaches and tools to improve the practicality side of AOP.
+Surprisingly, although aspect-oriented programming (AOP) is known as a programming paradigm that promotes better modularization of crosscutting-concerns, it is underutilized in real-world projects that suffer from crosscutting-concerns. As part of my MSc thesis I have been researching new approaches and tools to improve the practicality side of AOP.
 
 My advisor is [Prof. David Lorenz](https://www.google.co.il/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwj99_6MtPDLAhXCtBoKHYMZAq4QFggbMAA&url=http%3A%2F%2Fwww.openu.ac.il%2Fhome%2Florenz%2F&usg=AFQjCNGqw4RqD7ImwOsYSo0A5HQ8S9t6kQ&sig2=c2oRZVQhU4g4CqAoujmVgA).
 
