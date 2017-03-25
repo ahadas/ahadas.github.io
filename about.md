@@ -88,9 +88,9 @@ Modularity 2015
 
 # Presentations {#presentations}
 
-**Experiencing with Language Oriented Modularity**
-Poster session, <Programming> 2017
-[<img src="/images/pdf.png" width="25">](/slides/Experiencing with Language Oriented Modularity.pdf)
+**Experiencing with Language Oriented Modularity**  
+Poster session, <Programming> 2017  
+[<img src="/images/pdf.png" width="25">](/slides/Experiencing with Language Oriented Modularity.pdf)  
 
 **Language Oriented Modularity: From Theory to Practice**  
 Student Research Competition, Modularity 2016  
