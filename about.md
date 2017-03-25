@@ -87,6 +87,8 @@ A Language Workbench for Creating Production-Ready Extensions to AspectJ
 Modularity 2015
 
 # Presentations {#presentations}
+**Language Oriented Modularity: From Theory to Practice**  
+Research papers track, &lt;Programming&gt; 2017  
 
 **Experiencing with Language Oriented Modularity**  
 Poster session, &lt;Programming&gt; 2017  
