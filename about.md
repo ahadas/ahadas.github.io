@@ -36,7 +36,7 @@ The code is available at [GitHub](https://github.com/OpenUniversity).
 # Research
 Surprisingly, although aspect-oriented programming (AOP) is known as a programming paradigm that promotes better modularization of crosscutting-concerns, it is underutilized in real-world projects that suffer from crosscutting-concerns. As part of my MSc thesis I have been researching new approaches and tools to improve the practicality side of AOP.
 
-My advisor is [Prof. David Lorenz](https://www.google.co.il/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwj99_6MtPDLAhXCtBoKHYMZAq4QFggbMAA&url=http%3A%2F%2Fwww.openu.ac.il%2Fhome%2Florenz%2F&usg=AFQjCNGqw4RqD7ImwOsYSo0A5HQ8S9t6kQ&sig2=c2oRZVQhU4g4CqAoujmVgA).
+My advisor is [Prof. David H. Lorenz](https://www.google.co.il/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwj99_6MtPDLAhXCtBoKHYMZAq4QFggbMAA&url=http%3A%2F%2Fwww.openu.ac.il%2Fhome%2Florenz%2F&usg=AFQjCNGqw4RqD7ImwOsYSo0A5HQ8S9t6kQ&sig2=c2oRZVQhU4g4CqAoujmVgA).
 
 My research interests:  
 Aspect oriented programming (AOP)  
@@ -45,7 +45,7 @@ Software development methodologies and tools.
 
 ## Publications {#publications}
 ***Language oriented modularity: from theory to practice**  
-Arik Hadas, David Lorenz  
+Arik Hadas, David H. Lorenz  
 The Art, Science and Engineering of Programming 2017  
 
 *Language oriented modularity: from theory to practice**  
@@ -54,30 +54,30 @@ Modularity (Companion) 2016
 [<img src="/images/pdf.png" width="25">](/papers/Language Oriented Modularity: From Theory to Practice.pdf)
 
 **Toward disposable domain-specific aspect languages**  
-Arik Hadas, David Lorenz  
+Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2016  
 [<img src="/images/pdf.png" width="25">](/papers/Toward Disposable Domain-Specific Aspect Languages.pdf)
 
 **Toward practical language oriented modularity**  
-Arik Hadas, David Lorenz  
+Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2016  
 [<img src="/images/pdf.png" width="25">](/papers/Toward Practical Language Oriented Modularity.pdf)
 
 **Application-specific language-oriented modularity: a case study of the ovirt project**  
-Arik Hadas, David Lorenz  
+Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2016  
 [<img src="/images/pdf.png" width="25">](/papers/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)
 
 **A language workbench for implementing your favorite extension to AspectJ**  
-Arik Hadas, David Lorenz  
+Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2015
 
 **First-class domain specific aspect languages**  
-Arik Hadas, David Lorenz  
+Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2015
 
 **Demanding first-class equality for domain specific aspect languages**  
-Arik Hadas, David Lorenz  
+Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2015
 
 ## Awards
