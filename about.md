@@ -44,7 +44,11 @@ Domain specific languages (DSL)
 Software development methodologies and tools.
 
 ## Publications {#publications}
-**Language oriented modularity: from theory to practice**  
+***Language oriented modularity: from theory to practice**  
+Arik Hadas, David Lorenz  
+The Art, Science and Engineering of Programming 2017  
+
+*Language oriented modularity: from theory to practice**  
 Arik Hadas  
 Modularity (Companion) 2016  
 [<img src="/images/pdf.png" width="25">](/papers/Language Oriented Modularity: From Theory to Practice.pdf)
