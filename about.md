@@ -96,7 +96,7 @@ Research papers track, &lt;Programming&gt; 2017
 
 **Experiencing with Language Oriented Modularity**  
 Poster session, &lt;Programming&gt; 2017  
-[<img src="/images/pdf.png" width="25">](/slides/src_17.pdf)  
+[<img src="/images/pdf.png" width="25">](/slides/poster_17.pdf)
 [<img src="/images/pdf.png" width="25">](/slides/Experiencing with Language Oriented Modularity.pdf)  
 
 **Language Oriented Modularity: From Theory to Practice**  
