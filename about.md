@@ -93,6 +93,7 @@ Modularity 2015
 # Presentations {#presentations}
 **Language Oriented Modularity: From Theory to Practice**  
 Research papers track, &lt;Programming&gt; 2017  
+[<img src="/images/pdf.png" width="25">](/slides/programming17.pdf)  
 
 **Experiencing with Language Oriented Modularity**  
 Poster session, &lt;Programming&gt; 2017  
