@@ -92,6 +92,10 @@ A Language Workbench for Creating Production-Ready Extensions to AspectJ
 Modularity 2015
 
 # Presentations {#presentations}
+**Monitoring At Scale: What was Recently Done and What's Next in oVirt**  
+Open Source Summit Europe, 2017  
+[<img src="/images/pdf.png" width="25">](/slides/monitoring_at_scale.pdf)  
+
 **Language Oriented Modularity: From Theory to Practice**  
 Research papers track, &lt;Programming&gt; 2017  
 [<img src="/images/pdf.png" width="25">](/slides/programming17.pdf)  
