@@ -6,7 +6,7 @@ title: Addressing Abstraction Hell in oVirt
 When I was a kid we used to play this game in which someone thought about a message and told it to his friend. The latter told the message he heard to another kid, and so on. Eventually, we were amused to see the difference between the original message and the one that the last kid has heard. This post describes our approach for addressing a similar problem that was caused by having too many abstraction layers in oVirt. Each layer converted its input in order to report it to the next layer "in its own words", resulting in cumbersome and error-prone business flows in our platform.
 
 # Background
-oVirt was originated from a management platform developed by a [startup company that created the KVM hypervisor](https://en.wikipedia.org/wiki/Qumranet). Back at its early days, not only that the technology it was implemented in was different than the one we use today, but also it was designed differently.
+oVirt was originated from a management platform developed by a [startup company that created the KVM hypervisor](https://en.wikipedia.org/wiki/Qumranet). Back at its early days, not only that the technology it was implemented in was different than the one we use today, but it was also designed differently.
 
 Initially, the agent that resides on the distributed hosts, VDSM, was expected to interact directly with the hypervisor. Another protocol was defined for the communication between the central management unit (called ovirt-engine nowadays) and VDSM.
 
