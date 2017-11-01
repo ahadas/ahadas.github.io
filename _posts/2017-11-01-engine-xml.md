@@ -10,7 +10,7 @@ oVirt was originated from a management platform developed by a [startup company 
 
 Initially, the agent that resides on the distributed hosts, VDSM, was expected to interact directly with the hypervisor. Another protocol was defined for the communication between the central management unit (called ovirt-engine nowadays) and VDSM.
 
-Consequently, flows that included interaction with the hypervisor required two conversions. Figure 1 depicts such a flow. The management unit had its own representation of business entities that front-end clients used in order to communicate with the back-end. The management unit needed to convert those entities to the language VDSM speaks which is dictionary-based. VDSM, in turn, needed to convert the dictionary it received to the set of parameters that conform with the language of the hypervisor.
+Consequently, flows that included interaction with the hypervisor required two data conversions. Figure 1 depicts such a flow. The management unit had its own representation of business entities that front-end clients used in order to communicate with the back-end. The management unit needed to convert those entities to the language VDSM speaks which is dictionary-based. VDSM, in turn, needed to convert the dictionary it received to the set of parameters that conform with the language of the hypervisor.
 
 ![Architecture Before Using Libvirt](../images/engine_xml/without_libvirt.png)  
 Figure 1: Architecture Before Using Libvirt
