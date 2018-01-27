@@ -94,8 +94,8 @@ Modularity 2015
 # Presentations {#presentations}
 **High Availability with No Split Brains!**  
 DevConf.cz, 2018  
+[<img src="/images/pdf.png" width="25">](/slides/high_availability_with_no_split_brains.pdf)
 [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=Gh2eB06IE2A&t=2s&nohtml5=False)  
-[<img src="/images/pdf.png" width="25">](/slides/high_availability_with_no_split_brains.pdf)  
 
 **Monitoring At Scale: What was Recently Done and What's Next in oVirt**  
 Open Source Summit Europe, 2017  
