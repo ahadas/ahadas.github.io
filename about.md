@@ -83,11 +83,11 @@ Modularity (Companion) 2015
 
 ## Awards
 
-**Won ACM Student Research Competition**  
+**First Place in ACM Student Research Competition**  
 Language Oriented Modularity: From Theory to Practice  
 Modularity 2016
 
-**Second place in ACM Student Research Competition**  
+**Second Place in ACM Student Research Competition**  
 A Language Workbench for Creating Production-Ready Extensions to AspectJ  
 Modularity 2015
 
