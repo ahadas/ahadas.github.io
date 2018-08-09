@@ -39,12 +39,12 @@ Honestly, the [project pulse](https://github.com/mucommander/mucommander/pulse) 
 Next, I describe the four major challenges I see at the moment that hinder the progress of the project.  
 
 ## Scaling the development model
-From time to time we get some really nice contributions as well as issues that users report. However, we currently have a fairly large codebase that becomes hard to maintain by a single maintainer. That causes PRs and issues to occasionally wait relatively long time for attention.
+From time to time we get some really nice contributions as well as issues that users report. However, we currently have a fairly large codebase that becomes hard to maintain by a single maintainer. That causes PRs and issues to occasionally wait relatively long time for getting attention.
 
 ## Communicating with the community
 The contributions we get and issues that are being filed are a good sign as they show that both developers and end-users are interested in and using muCommander.  
 
-We used to communicate with the developers and users communities by [Google group](https://groups.google.com/d/forum/mucommander-dev), [Forum](http://mu-j.com/mucommander/forums/), and [IRC channel](irc://irc.freenode.net/mucommander). All these are practically abandoned. Seems like both the GitHub issues/PRs and GITTER provide good alternatives for communicating with developers. It may feel like the tools we currently use do not provide a good alternative to the Google group and the Forum for getting feedback and ideas from users though. But on the other hand, that may also be a consequence of the relatively low traffic in general in the project these days.
+We used to communicate with the developer and user communities by [Google group](https://groups.google.com/d/forum/mucommander-dev), [Forum](http://mu-j.com/mucommander/forums/), and [IRC channel](irc://irc.freenode.net/mucommander). All these are practically abandoned. Seems like both the GitHub issues/PRs and GITTER provide good alternatives for communicating with developers. It may feel like the tools we currently use do not provide a good alternative to the Google group and the Forum for getting feedback and ideas from users though. But on the other hand, that may also be a consequence of the relatively low traffic in general in the project these days.
 
 ## Competitive products and projects
 There is a large variety of alternative file managers nowadays. Some of them target a specific operating system and thus are sometimes faster and better integrated (the most interesting are probably those that target Mac OS X, that is used by most of our user base). Some are backed up by commercial organizations. Those are typically proprietary products that provide base funtionality for free  and other paid capabilities.  
@@ -62,7 +62,7 @@ Some features that were recently introduced exposed gaps in our platform. Here, 
 Next, I will share some thoughts on how to address the aforementioned challenges.
 
 ## Redefine the "mission statement"
-The development of muCommander started more than 15 years ago. That is pretty long time in software terms and so some of the assumptions we began with may not be relevant anymore. For example, the minimal USB stick today contains at least 1G and internet connection is much faster. So considering that muCommander is unlikely to run on devices with limited resources (such as mobile phones), it would probably be alright to produced a larger-size application. As another example, today much more data is stored on cloud services such as dropbox and google drive. Supporting such services may be more important for end-users than things like advanced integrated text editor today.  
+The development of muCommander started more than 15 years ago. That is a pretty long time in software terms and so some of the assumptions we began with may not be relevant anymore. For example, the minimal USB stick today contains at least 1G and internet connection is much faster. So considering that muCommander is unlikely to run on devices with limited resources (such as mobile phones), it would probably be alright to produced a larger-size application. As another example, today much more data is stored on cloud services such as dropbox and google drive. Supporting such services may be more important for end-users than things like advanced integrated text editor today.  
 
 So I think this may be the right time to reconsider what is the goal of muCommander - what are its strengths, what should it provide, why should users continue using it and why should developers continue contributing to it.
 
@@ -80,7 +80,7 @@ The implementation of a pluggable machnism for muCommander [was already discusse
 ## Promoting the project
 With an up-to-date "mission statement" and a pluggable mechanism available, we should then promote the project. There are several ways to do this:
 
-* Presenting in a big conference, such as FOSDEM or DevConf.cz. 
+* Presenting in a conference, such as FOSDEM or DevConf.cz. 
 * Writing an article to a known website, such as [opensource.com](https://opensource.com).
 * Define a list of desired features (such as PDF viewer, integrating dagger 2, etc) and submit the project to GSoC (Google Summer of Code).
 
