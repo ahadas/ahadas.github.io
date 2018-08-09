@@ -82,7 +82,7 @@ With an up-to-date "mission statement" and a pluggable mechanism available, we s
 
 * Presenting in a conference, such as FOSDEM or DevConf.cz. 
 * Writing an article to a known website, such as [opensource.com](https://opensource.com).
-* Define a list of desired features (such as PDF viewer, integrating dagger 2, etc) and submit the project to GSoC (Google Summer of Code).
+* Defining a list of some desired features (such as PDF viewer, integrating dagger 2, etc) and submitting the project to GSoC (Google Summer of Code).
 
 ## Reassess Gitter for user discussions
 When things are back on track, we can reassess Gitter as a tool for communicating with end-users. It may be a good idea to schedule a bi-weekly conference meeting to discuss topics related to the project.
