@@ -3,7 +3,7 @@ layout: post
 title: About muCommander
 ---
 
-Ten years ago (2008) I submitted my first contribution to an open source project named [muCommander](http://ahadas.github.io/about/#mucommander) that I maintain to this day. This post provides a short description of the project, the recent changes we have made, challenges we are facing, and some future plans.
+Ten years ago (2008) I submitted my first contribution to an open source project named [muCommander](http://ahadas.github.io/about/#mucommander) that I maintain to this day. This post provides a short description of the project, recent changes we have made, challenges we are facing, and some future plans.
 
 # What?
 _**muCommander is a lightweight, cross-platform file manager with a dual-pane interface. It runs on any operating system with Java support (Mac OS X, Windows, Linux, *BSD, Solaris...).**_  
