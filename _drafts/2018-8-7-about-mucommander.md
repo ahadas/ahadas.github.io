@@ -85,4 +85,4 @@ With an up-to-date "mission statement" and a pluggable mechanism available, we s
 * Defining a list of some desired features (such as PDF viewer, integrating dagger 2, etc) and submitting the project to GSoC (Google Summer of Code).
 
 ## Reassess Gitter for user discussions
-When things are back on track, we can reassess Gitter as a tool for communicating with end-users. It may be a good idea to schedule a bi-weekly conference meeting to discuss topics related to the project.
+When things are back on track, we can reassess Gitter as a tool for communicating with end-users. It may be a good idea to schedule a bi-weekly (or a monthly) conference meeting to discuss topics related to the project.
