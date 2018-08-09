@@ -17,7 +17,7 @@ And not only that muCommander supports many file protocols but it also abstracts
 
 These great capabilities are provided on all mainstream operating systems (OS). By having its core and most of its functionality written in Java, muCommander becomes cross-platform. Except for some OS-specific features that use native code (e.g., moving files to the trash), everything is implemented in the Java language. For developers it is significant as it conforms the principle of _write once, run anywhere_.  
 
-Another benefit of being implemented in Java is that muCommander can leverage the large variety of third-party client-side code for different file protocols.  
+Another benefit of being implemented in Java is that muCommander can leverage the large variety of third-party client-side libraries for different file protocols.  
 
 # Recent changes
 Honestly, the [project pulse](https://github.com/mucommander/mucommander/pulse) has not been that great recently. I will touch that later on. Nevertheless, some important changes were done.
