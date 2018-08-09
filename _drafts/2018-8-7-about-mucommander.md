@@ -55,7 +55,7 @@ Another type of alternative products are those that forked from muCommander in t
 Some features that were recently introduced exposed gaps in our platform. Here, I describe two of them:
 
 1. As mentioned before, muCommander was designed to be a **lightweight** file manager, something one can deploy on a minimal USB stick and execute on different machines. That is why we use *proguard* to shrink the jar that is being produced. Nontheless, the size of the produced jar increased due to features such as [supporting vSphere VMs file system](https://yuval.kohavi.info/vsphere/) that brought a dependency of 3.3M with it.
-2. When considering something like supporting the qcow2 volumes format (and other virtual disk formats, such as vmdk) using libguestfs, we encounter two issues. First, libguestfs is not available on all operating systems. As mentioned before, muCommander already includes OS-specific things but in this case it would mean having unused dependencies. Second, it requires not only the java dependency (java bindings for libguestfs) but also library code to be installed on the OS (libguestfs). We have no way of specifying such dependencies.
+2. When considering something like supporting the qcow2 volumes format (and other virtual disk formats, such as vmdk) using libguestfs, we encounter two issues. First, libguestfs is not available on all operating systems. As mentioned before, muCommander already includes OS-specific things but in this case it would mean having unused dependencies on many operating systems. Second, it requires not only the java dependency (java bindings for libguestfs) but also library code to be installed on the OS (libguestfs). We currently have no way to specify such dependencies.
 
 
 # So what should we do?
