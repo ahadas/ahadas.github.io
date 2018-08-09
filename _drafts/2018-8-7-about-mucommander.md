@@ -78,7 +78,7 @@ Such a pluggalbe mechanism would enable us to:
 The implementation of a pluggable machnism for muCommander [was already discussed in the past](https://groups.google.com/d/msg/mucommander-dev/-IfxXALXo4U/CJKrhA6A1aYJ). A natural infrastructure to use for this would be OSGI.
 
 ## Promoting the project
-With an up-to-date "mission statement" and a pluggable mechanism available, we should then promote the project. There are several ways to do this:
+With an up-to-date "mission statement" and a pluggable mechanism available, we should then promote the project. There are several ways to do this, like:
 
 * Presenting in a conference, such as FOSDEM or DevConf.cz. 
 * Writing an article to a known website, such as [opensource.com](https://opensource.com).
