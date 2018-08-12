@@ -67,9 +67,9 @@ The development of muCommander started more than 15 years ago. That is a pretty 
 So I think this may be the right time to reconsider what is the goal of muCommander - what are its strengths, what should it provide, why should users continue using it and why should developers continue contributing to it.
 
 ## Pluggable design
-In my opinion, the most important technical change at the moment is introducing a pluggable mechanism. First, it can target only extensions for new file formats and file protocols. Later, it can be extended with other types of extensions.  
+In my opinion, the most important technical change at the moment is introducing a pluggable framework. First, it can target only extensions for new file formats and file protocols. Later, it can be extended with other types of extensions.  
 
-Such a pluggalbe mechanism would enable us to:
+Such a pluggable framework would enable us to:
 
 * Separate out heavy file format or protocol implementations from the codebase.
 * Install OS-specific extensions only when they are needed.
@@ -78,7 +78,7 @@ Such a pluggalbe mechanism would enable us to:
 The implementation of a pluggable machnism for muCommander [was already discussed in the past](https://groups.google.com/d/msg/mucommander-dev/-IfxXALXo4U/CJKrhA6A1aYJ). A natural infrastructure to use for this would be OSGI.
 
 ## Promoting the project
-With an up-to-date "mission statement" and a pluggable mechanism available, we should then promote the project. There are several ways to do this, like:
+With an up-to-date "mission statement" and a pluggable framework available, we should then promote the project. There are several ways to do this, like:
 
 * Presenting in a conference, such as FOSDEM or DevConf.cz. 
 * Writing an article to a known website, such as [opensource.com](https://opensource.com).
