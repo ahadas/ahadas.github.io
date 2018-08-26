@@ -156,3 +156,6 @@ FOSDEM 2015
 [<img src="/images/pdf.png" width="25">](/slides/ram_snapshots.pdf)
 [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=xIhPV66uGo8)  
 CloudOpen Europe 2013  
+
+# Patents {#patents}
+[**Deleting disks while maintaining snapshot consistency in a virtualized data-center**](https://patents.justia.com/patent/20180217765)
