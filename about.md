@@ -44,23 +44,28 @@ Domain specific languages (DSL)
 Software development methodologies and tools.
 
 ## Publications {#publications}
-**Language oriented modularity: from theory to practice** [<img src="/images/pdf.png" width="25">](https://arxiv.org/ftp/arxiv/papers/1703/1703.10858.pdf)  
+**Language oriented modularity: from theory to practice**
+[<img src="/images/pdf.png" width="25">](https://arxiv.org/ftp/arxiv/papers/1703/1703.10858.pdf)  
 Arik Hadas, David H. Lorenz  
 The Art, Science and Engineering of Programming 2017  
 
-**Language oriented modularity: from theory to practice** [<img src="/images/pdf.png" width="25">](/papers/Language Oriented Modularity: From Theory to Practice.pdf)  
+**Language oriented modularity: from theory to practice**
+[<img src="/images/pdf.png" width="25">](/papers/Language Oriented Modularity: From Theory to Practice.pdf)  
 Arik Hadas  
 Modularity (Companion) 2016  
 
-**Toward disposable domain-specific aspect languages** [<img src="/images/pdf.png" width="25">](/papers/Toward Disposable Domain-Specific Aspect Languages.pdf)  
+**Toward disposable domain-specific aspect languages**
+[<img src="/images/pdf.png" width="25">](/papers/Toward Disposable Domain-Specific Aspect Languages.pdf)  
 Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2016  
 
-**Toward practical language oriented modularity** [<img src="/images/pdf.png" width="25">](/papers/Toward Practical Language Oriented Modularity.pdf)  
+**Toward practical language oriented modularity**
+[<img src="/images/pdf.png" width="25">](/papers/Toward Practical Language Oriented Modularity.pdf)  
 Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2016  
 
-**Application-specific language-oriented modularity: a case study of the ovirt [<img src="/images/pdf.png" width="25">](/papers/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf) project**  
+**Application-specific language-oriented modularity: a case study of the ovirt  project**
+[<img src="/images/pdf.png" width="25">](/papers/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)  
 Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2016  
 
@@ -87,67 +92,66 @@ A Language Workbench for Creating Production-Ready Extensions to AspectJ
 Modularity 2015
 
 # Presentations {#presentations}
-**High Availability with No Split Brains!**  
-DevConf.cz, 2018  
+**High Availability with No Split Brains!**
 [<img src="/images/pdf.png" width="25">](/slides/high_availability_with_no_split_brains.pdf)
 [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=Gh2eB06IE2A&t=2s&nohtml5=False)  
+DevConf.cz, 2018  
 
-**Monitoring At Scale: What was Recently Done and What's Next in oVirt**  
-Open Source Summit Europe, 2017  
+**Monitoring At Scale: What was Recently Done and What's Next in oVirt**
 [<img src="/images/pdf.png" width="25">](/slides/monitoring_at_scale.pdf)  
+Open Source Summit Europe, 2017  
 
-**Language Oriented Modularity: From Theory to Practice**  
-Research papers track, &lt;Programming&gt; 2017  
+**Language Oriented Modularity: From Theory to Practice**
 [<img src="/images/pdf.png" width="25">](/slides/programming17.pdf)  
+Research papers track, &lt;Programming&gt; 2017  
 
-**Experiencing with Language Oriented Modularity**  
-Poster session, &lt;Programming&gt; 2017  
+**Experiencing with Language Oriented Modularity**
 [<img src="/images/pdf.png" width="25">](/slides/poster_17.pdf)
 [<img src="/images/pdf.png" width="25">](/slides/Experiencing with Language Oriented Modularity.pdf)  
+Poster session, &lt;Programming&gt; 2017  
 
-**Language Oriented Modularity: From Theory to Practice**  
-Student Research Competition, Modularity 2016  
+**Language Oriented Modularity: From Theory to Practice**
 [<img src="/images/pdf.png" width="25">](/slides/src_16.pdf)
 [<img src="/images/pdf.png" width="25">](/slides/poster_src_16.pdf)  
+Student Research Competition, Modularity 2016  
 
-**Toward disposable domain-specific aspect languages**  
+**Toward disposable domain-specific aspect languages**
+[<img src="/images/pdf.png" width="25">](/slides/Toward Disposable Domain-Specific Aspect Languages.pdf)  
 Workshop on Foundations Of Aspect-Oriented Languages 2016  
-[<img src="/images/pdf.png" width="25">](/slides/Toward Disposable Domain-Specific Aspect Languages.pdf)
 
-**Toward practical language oriented modularity**  
+**Toward practical language oriented modularity**
+[<img src="/images/pdf.png" width="25">](/slides/Toward Practical Language Oriented Modularity.pdf)  
 Workshop on Language Modularity À La Mode 2016  
-[<img src="/images/pdf.png" width="25">](/slides/Toward Practical Language Oriented Modularity.pdf)
 
-**Application-specific language-oriented modularity: a case study of the ovirt project**  
+**Application-specific language-oriented modularity: a case study of the ovirt project**
+[<img src="/images/pdf.png" width="25">](/slides/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)  
 Workshop on Modularity Across the System Stack 2016  
-[<img src="/images/pdf.png" width="25">](/slides/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)
 
-**Managed conversion of guests to oVirt**  
-KVM Forum 2015  
+**Managed conversion of guests to oVirt**
 [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=rYrnfduAkU0&nohtml5=False)  
+KVM Forum 2015  
 
-**Demanding First-Class Equality for Domain Specific Aspect Languages**  
+**Demanding First-Class Equality for Domain Specific Aspect Languages**
+[<img src="/images/pdf.png" width="25">](/slides/position_15.pdf)  
 Position papers track, Modularity 2015  
-[<img src="/images/pdf.png" width="25">](/slides/position_15.pdf)
 
-**First Class Domain Specific Aspect Languages**  
+**First Class Domain Specific Aspect Languages**
+[<img src="/images/pdf.png" width="25">](/slides/poster_15.pdf)  
 Poster session, Modularity 2015  
-[<img src="/images/pdf.png" width="25">](/slides/poster_15.pdf)
 
-**A Language Workbench for Creating Production-Ready Extensions to AspectJ**  
+**A Language Workbench for Creating Production-Ready Extensions to AspectJ** [<img src="/images/pdf.png" width="25">](/slides/src_15.pdf)
+[<img src="/images/pdf.png" width="25">](/slides/poster_src_15.pdf)  
 Student Research Competition, Modularity 2015  
-[<img src="/images/pdf.png" width="25">](/slides/src_15.pdf)
-[<img src="/images/pdf.png" width="25">](/slides/poster_src_15.pdf)
 
-**A Language Workbench for Implementing Your Favorite Extension to AspectJ**  
+**A Language Workbench for Implementing Your Favorite Extension to AspectJ**
+[<img src="/images/pdf.png" width="25">](/slides/demo_15.pdf)  
 Demo session, Modularity 2015  
-[<img src="/images/pdf.png" width="25">](/slides/demo_15.pdf)
 
-**Moving your Virtual Machines to oVirt with ease**  
+**Moving your Virtual Machines to oVirt with ease**
+[<img src="/images/pdf.png" width="25">](/slides/v2v_fosdem.pdf)  
 FOSDEM 2015  
-[<img src="/images/pdf.png" width="25">](/slides/v2v_fosdem.pdf)
 
-**RAM Snapshots in oVirt**  
-CloudOpen Europe 2013  
+**RAM Snapshots in oVirt**
 [<img src="/images/pdf.png" width="25">](/slides/ram_snapshots.pdf)
 [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=xIhPV66uGo8)  
+CloudOpen Europe 2013  
