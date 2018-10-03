@@ -6,7 +6,7 @@ permalink: /about/
 
 I am a software engineer at [Red Hat](https://www.redhat.com) and a graduate student at the [Open University of Israel](http://www.openu.ac.il). I am interested in different aspects of programming and particularly in large and distributed software development and modularization techniques.
 
-I live in Tel-Aviv, Israel.
+I live in Herzliya, Israel.
 
 # Projects
 Following are the projects I work on nowadays or worked on in the past.  
