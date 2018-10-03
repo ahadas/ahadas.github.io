@@ -49,6 +49,11 @@ Software development methodologies and tools.
 Arik Hadas, David H. Lorenz  
 The Art, Science and Engineering of Programming 2017  
 
+**Language Oriented Modularity: A Practical Approach**  
+[<img src="/images/pdf.png" width="25">](http://src.acm.org/binaries/content/assets/src/2016/arikhadas.pdf)  
+Arik Hadas  
+Student Research Competition, Grand Final 2017  
+
 **Language oriented modularity: from theory to practice**  
 [<img src="/images/pdf.png" width="25">](/papers/Language Oriented Modularity: From Theory to Practice.pdf)  
 Arik Hadas  
@@ -159,3 +164,4 @@ CloudOpen Europe 2013
 
 # Patents {#patents}
 [**Deleting disks while maintaining snapshot consistency in a virtualized data-center**](https://patents.justia.com/patent/20180217765)
+
