@@ -20,21 +20,21 @@ More information about my open source contributions is available on [Open HUB](h
 
 I have been contributing to oVirt since 2012, mainly to VM-lifecycle related flows in ovirt-engine. Since 2014 I am a co-maintainer of ovirt-engine.  
 
-The code is available at [GitHub](https://github.com/ovirt).
+The code is available [here](https://github.com/ovirt).
 
 ## muCommander
 [muCommander](http://www.mucommander.com) is a lightweight, cross-platform file manager with a dual-pane interface. It runs on any operating system with Java support (Mac OS X, Windows, Linux, BSD, Solaris...).
 
 Since 2007 I have been contributing to muCommander. These days I maintain the project.
 
-The code is available at [GitHub](https://github.com/mucommander).
+The code is available [here](https://github.com/mucommander).
 
 ## AOP-Awesome
 A multi-DSAL development is a mode of application developemnt where in addition to one or more general purpose languages (e.g., Java, AspectJ), multiple domain-specific aspect languages (DSALs) are used. For example, one DSAL (e.g., COOL) may be used for implementing the thread synchronization concern, other for the security concern, etc. [Awesome](http://aop.cslab.openu.ac.il/research/awesome) is an aspect composition framework. Awesome makes multi-DSAL development feasible by allowing to compose a variety of aspect mechanisms, each corresponding to a specific DSAL, into a single multi-mechanism weaver.
 
 I upgraded Awesome to latest versions of AspectJ and extended it to support [explicit join points](http://dl.acm.org/citation.cfm?id=1294335&dl=ACM&coll=DL&CFID=596909188&CFTOKEN=29117700) and [closure joinpoints](http://dl.acm.org/citation.cfm?id=1960291&dl=ACM&coll=DL&CFID=596909188&CFTOKEN=29117700).
 
-The code is available at [GitHub](https://github.com/OpenUniversity).
+The code is available [here](https://github.com/OpenUniversity).
 
 # Research
 Surprisingly, although aspect-oriented programming (AOP) is known as a programming paradigm that promotes better modularization of crosscutting-concerns, it is underutilized in real-world projects that suffer from crosscutting-concerns. As part of my MSc thesis I have been researching new approaches and tools to improve the practicality side of AOP.
