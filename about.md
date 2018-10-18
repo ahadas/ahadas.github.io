@@ -12,6 +12,9 @@ I live in Herzliya, Israel.
 Following are the projects I work on nowadays or worked on in the past.  
 More information about my open source contributions is available on [Open HUB](https://www.openhub.net/accounts/Arik_Hadas/).
 
+## KubeVirt {#kubevirt}
+[KubeVirt](https://kubevirt.io) is an extension to kubernetes that enables running virtual machines along side containers within a kubernetes cluster.  
+
 ## oVirt {#ovirt}
 [oVirt](http://www.ovirt.org) is a virtualization management platform optimized to the KVM hypervisor. It was founded by Red Hat as a community project on which Red Hat Enterprise Virtualization is based. It allows centralized management of virtual machines, compute, storage and networking resources, from an easy to use web-based front-end with platform independent access.
 
