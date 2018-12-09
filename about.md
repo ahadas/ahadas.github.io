@@ -103,7 +103,7 @@ Modularity 2016
 A Language Workbench for Creating Production-Ready Extensions to AspectJ  
 Modularity 2015
 
-# Presentations {#presentations}
+# Talks {#presentations}
 **High Availability with No Split Brains!**  
 [<img src="/images/pdf.png" width="25">](/slides/high_availability_with_no_split_brains.pdf)
 [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=Gh2eB06IE2A&t=2s&nohtml5=False)  
