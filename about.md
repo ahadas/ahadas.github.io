@@ -104,7 +104,7 @@ A Language Workbench for Creating Production-Ready Extensions to AspectJ
 Modularity 2015
 
 # Talks {#presentations}
-***Toward exploring virtual disks using a file manager!*  
+**Toward exploring virtual disks using a file manager!**  
 [<img src="/images/pdf.png" width="25">](/slides/toward_exploring_virtual_disks_using_a_file_manager.pdf)
 <!-- [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=Gh2eB06IE2A&t=2s&nohtml5=False)  -->
 FOSDEM, 2019  
