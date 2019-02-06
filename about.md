@@ -106,7 +106,7 @@ Modularity 2015
 # Talks {#presentations}
 **Toward exploring virtual disks using a file manager!**  
 [<img src="/images/pdf.png" width="25">](/slides/toward_exploring_virtual_disks_using_a_file_manager.pdf)
-<!-- [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=Gh2eB06IE2A&t=2s&nohtml5=False)-->  
+[<img src="/images/video.png" width="25">](https://video.fosdem.org/2019/H.2213/vai_towards_exploring_virtual_disks.mp4)  
 FOSDEM, 2019  
 
 **High Availability with No Split Brains!**  
