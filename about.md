@@ -175,7 +175,7 @@ FOSDEM 2015
 CloudOpen Europe 2013  
 
 # Patents {#patents}
-[**Base state for thin-provisioned volumes**](https://patents.justia.com/patent/20190129740)
-[**Detach virtual machine from virtual machine template**](https://patents.justia.com/patent/20190065170)
-[**Deleting disks while maintaining snapshot consistency in a virtualized data-center**](https://patents.justia.com/patent/20180217765)
+[**Base state for thin-provisioned volumes**](https://patents.justia.com/patent/20190129740)  
+[**Detach virtual machine from virtual machine template**](https://patents.justia.com/patent/20190065170)  
+[**Deleting disks while maintaining snapshot consistency in a virtualized data-center**](https://patents.justia.com/patent/20180217765)  
 
