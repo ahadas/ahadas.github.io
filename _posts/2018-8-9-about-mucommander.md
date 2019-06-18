@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About muCommander
+title: muCommander
 ---
 
 Ten years ago (2008) I submitted my first contribution to an open source project named [muCommander](http://www.mucommander.com) that I maintain to this day. This post provides a short description of the project, recent changes we have made, challenges we are facing, and some future plans.
