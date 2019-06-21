@@ -175,6 +175,7 @@ FOSDEM 2015
 CloudOpen Europe 2013  
 
 # Patents {#patents}
+* [Gradual creation process of server virtual machines](https://patents.justia.com/patent/20190188019)  
 * [Fast evacuation of a cloned disk to a storage device](https://patents.justia.com/patent/20190171386)  
 * [Base state for thin-provisioned volumes](https://patents.justia.com/patent/20190129740)  
 * [Detach virtual machine from virtual machine template](https://patents.justia.com/patent/20190065170)  
