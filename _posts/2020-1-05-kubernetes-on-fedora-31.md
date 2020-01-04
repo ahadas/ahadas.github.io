@@ -48,7 +48,7 @@ Install Kubernetes packages:
 $ yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 ```
 
-Enable kubelet:
+Enable `kubelet`:
 ```bash
 $ systemctl enable --now kubelet
 ```
@@ -90,7 +90,7 @@ And the pods:
 $ kubectl get pods -n kube-system
 ```
 
-To inspect the logs of kubelet, run:
+To inspect the logs of `kubelet`, run:
 ```bash
 $ journalctl -ur kubelet.service
 ```
