@@ -9,7 +9,7 @@ Various projects, like the [Kubevirt project](https://kubevirt.io/) that I've be
 
 However, as part of a new project I started to work on I needed to run Kubernetes clusters across distributed virtual machines (that can be considered physical machines on the same network) for which kubevirtci does not fit, and so following are the steps I've made that I share in the hope others that attempt to achieve the same thing would find it useful.  
 
-First, we need to installl docker as explained [in this guide](https://linuxconfig.org/how-to-install-docker-on-fedora-31).
+First, we need to install docker as explained [in this guide](https://linuxconfig.org/how-to-install-docker-on-fedora-31).
 
 Then change the `cgroup-driver` of docker to be systemd by extending `ExecStart` in `/etc/systemd/system/multi-user.target.wants/docker.service` with:
 ```
