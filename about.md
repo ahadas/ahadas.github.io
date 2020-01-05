@@ -20,7 +20,7 @@ I have been contributing to KubeVirt since 2018.
 The code is available [here](https://github.com/kubevirt).
 
 ## oVirt {#ovirt}
-[oVirt](http://www.ovirt.org) is a virtualization management platform optimized to the KVM hypervisor. It was founded by Red Hat as a community project on which Red Hat Virtualization is based. It allows centralized management of virtual machines, compute, storage and networking resources, from an easy to use web-based front-end with platform independent access.
+[oVirt](http://www.ovirt.org) is a virtualization management platform optimized to the KVM hypervisor. It was founded by Red Hat as a community project that Red Hat Virtualization is based on. It allows centralized management of virtual machines, compute, storage and networking resources, from an easy to use web-based front-end with platform independent access.
 
 I have been contributing to oVirt since 2012, mainly to VM-lifecycle related flows in ovirt-engine. Since 2014 I am a co-maintainer of ovirt-engine.  
 
