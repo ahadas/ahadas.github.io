@@ -18,7 +18,7 @@ In some projects, frequent packaging and deliverying of unstable releases may no
 
 But I believe the reason for the lack of nightly builds for the majority of projects out there would rather be the lack of a proper place to store them. Nightly builds are clearly useful for most projects, especially for software that is delivered as-a-service (SaaS) or standalone applications, however, it is not easy to find a free place to store them in a way that they could be easily consumed by users.  
 
-Let's look at the muCommander project, for example. Nightly builds, that were built by Jenkins, used to be stored on a local virtual machine. It was then easy to publish them on the project's website. However, the project no longer possesses a local machine that can be available all the time. Today, both our source code and our website are hosted on GitHub (and GitHub Pages) and while GitHub provides a place to store releases, it lacks a mechanism for storing nightly builds.  
+Let's look at the muCommander project, for example. Nightly builds, that were produced by Jenkins, used to be stored on a local virtual machine. It was then easy to publish them on the project's website. However, the project no longer possesses a local machine that can be available all the time. Today, both our source code and our website are hosted on GitHub (and GitHub Pages) and while GitHub provides a place to store releases, it lacks a mechanism for storing nightly builds.  
 
 # Our Solution
 
