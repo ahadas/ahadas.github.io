@@ -8,9 +8,9 @@ In this post I share a solution I have introduced for providing nightly builds o
 
 # Why Nightly Builds?
 
-Building and testing your project periodically is a common practice nowadays. Many projects run unit tests before merging pull requests (PRs). Some projects, like [KubeVirt](https://github.com/kubevirt), also run integration tests automatically before merging a PR, while others, like [oVirt](https://github.com/oVirt), run them on demand or after the fact. Various continuous integration tools such as [Travis CI](https://travis-ci.com) and [Circle CI](https://circleci.com) are available for this purpose.  
+Building and testing your project automatically is a common practice nowadays. Many projects run unit tests before merging pull requests (PRs). Some projects, like [KubeVirt](https://github.com/kubevirt), also run integration tests automatically before merging a PR, while others, like [oVirt](https://github.com/oVirt), run them on demand or after the fact. Various continuous integration tools such as [Travis CI](https://travis-ci.com) and [Circle CI](https://circleci.com) are available for this purpose.  
 
-However, many projects lack periodic releases. The concept of not only building the project but also deliverying unstable releases that are derived from the development branch periodically, possibly on a daily basis in which case they are generally referred to as *nightly builds*, is often missing despite its potential benefit. For users, it is a way to expose new features and by that enable them to provide early feedback. For developers, they may ease validating certain capabilities without the need to compile the code locally and copy the artifacts elsewhere.
+However, many projects lack automatic releases. The concept of not only building the project but also deliverying unstable releases that are derived from the development branch periodically, possibly on a daily basis in which case they are generally referred to as *nightly builds*, is often missing despite its potential benefit. For users, it is a way to expose new features and by that enable them to provide early feedback. For developers, they may ease validating certain capabilities without the need to compile the code locally and copy the artifacts elsewhere.
 
 # What's the Challenge? 
 
