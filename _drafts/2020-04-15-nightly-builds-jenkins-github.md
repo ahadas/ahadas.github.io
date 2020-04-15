@@ -3,7 +3,7 @@ layout: post
 title: Nightly Builds in GitHub using Jenkins
 ---
 
-In this post I share a solution I have introduced for providing nightly builds of the muCommander project on GitHub.
+In this post I share a solution I have implemented for publishing nightly builds on GitHub.
 
 
 # Why Nightly Builds?
@@ -69,7 +69,7 @@ Let's go over this script:
 First, we store our token for GitHub as explained in the abovementioned post.  
 Then we initialize some variables. The script makes use of the GitHub API and so the first two variables point to the endpoints of general API calls and upload calls for the `github.com/mucommander/mucommander` repository. The next two variables contain the name of the tag and the name of the release that the nightly build will be associated with. Next two variables contain the name of the artifact and its MD5 hash. Lastly, we set the description of the release to contain the MD5 hash and the name of the artifact.  
 Next, we query the existing release that is associated with the aforementioned tag and get its identifier. If the identifier is not empty, it means an existing release of a nightly build exists and it is therefore removed.  
-We then remove the existing tag, if it exists, so it will be recreated by the new release on top of the latest commit in the master branch.  
+We then remove the existing tag, if it exists, so it will be recreated by the new release on top of the latest commit on the master branch.  
 Finally, we create a new release with the abovementioned tag, name and description, and set it as non-draft and pre-release. We then extracts the identifier of the created release and use it to upload the artifact that was previously built by Jenkins to that release.
 
 # What's Next?
