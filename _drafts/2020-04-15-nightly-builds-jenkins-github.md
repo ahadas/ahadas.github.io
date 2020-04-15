@@ -18,15 +18,15 @@ In some projects, frequent packaging and deliverying of unstable releases may no
 
 But I believe the reason for the lack of nightly builds for the majority of projects out there would rather be the lack of a proper place to store them. Nightly builds are clearly useful for most projects, especially for software that is delivered as-a-service (SaaS) or standalone applications, however, it is not easy to find a free place to store them in a way that they could be easily consumed by users.  
 
-Let's look at the muCommander project, for example. Nightly builds, that were built by Jenkins, used to be stored on a local virtual machine. It was then easy to publish them on the project's website. However, the project no longer possesses a local machine that can be available all the time. Today, both our source code and our website are hosted on GitHub (and GitHub Pages) and while GitHub provides a place to store releases, it lacks a mechanism for storing nightly builds there.  
+Let's look at the muCommander project, for example. Nightly builds, that were built by Jenkins, used to be stored on a local virtual machine. It was then easy to publish them on the project's website. However, the project no longer possesses a local machine that can be available all the time. Today, both our source code and our website are hosted on GitHub (and GitHub Pages) and while GitHub provides a place to store releases, it lacks a mechanism for storing nightly builds.  
 
 # Our Solution
 
-The recently introduced solution for muCommander involves building the nightly builds using a local virtual machine (with Jenkins) that pushes the artifacts to GitHub. This way, the nightly builds are stored  "in the cloud", i.e., on a remote infrastructure that provides better availability than a local machine along with our stable releases that are also stored on GitHub. In addition, the local VM is a safe place to store my token for GitHub that is required for pushing the artifacts. While the local VM may not be running all the time, it can be easily recovered in case of a problem (in the worst case scenario, no new builds are produced but the previous one would still be available).  
+The recently introduced solution for muCommander involves building the nightly builds using a local virtual machine (with Jenkins) that pushes the artifacts to GitHub. This way, the nightly builds are stored  "in the cloud", i.e., on a remote infrastructure that provides better availability than a local machine along with our stable releases that are also stored on GitHub. In addition, the local VM is a safe place to store a token for GitHub that is required for pushing the artifacts. While the local VM may not be running all the time, it can be easily recovered in case of a problem (in the worst case scenario, no new builds are produced but the previous one would still be available).  
 
 I found no integration between Jenkins and GitHub that I could use for pushing the nightly builds to GitHub though. As I have previously mentioned, GitHub does not offer an out-of-the-box mechanism for third party tools like Jenkins or other CI/CD tools for nightly builds. This required me to write the following script that is based on the one I have found on [this post](https://medium.com/@systemglitch/continuous-integration-with-jenkins-and-github-release-814904e20776):
 
-```bash
+```sh
 # Publish on github
 echo "Publishing on Github..."
 token="<your-token>"
@@ -74,4 +74,4 @@ Finally, we create a new release with the abovementioned tag, name and descripti
 
 # What's Next?
 
-With this mechanism, we can start publishing nightly builds in the hope that they will provide us will earlier feedback on the upcoming features in muCommander. The nightly builds would be found [here](https://github.com/mucommander/mucommander/releases/tag/nightly).
+With this mechanism, we can start publishing nightly builds in the hope that they will provide us with earlier feedback on the upcoming features in muCommander. The nightly builds would be found [here](https://github.com/mucommander/mucommander/releases/tag/nightly).
