@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nightly Builds in GitHub using Jenkins
+title: Nightly Builds on GitHub using Jenkins
 ---
 
 In this post I share a solution I have implemented for publishing nightly builds on GitHub.
@@ -22,7 +22,7 @@ Let's look at the muCommander project, for example. Nightly builds, that were bu
 
 # Our Solution
 
-The recently introduced solution for muCommander involves building the nightly builds using a local virtual machine (with Jenkins) that pushes the artifacts to GitHub. This way, the nightly builds are stored  "in the cloud", i.e., on a remote infrastructure that provides better availability than a local machine along with our stable releases that are also stored on GitHub. In addition, the local VM is a safe place to store a token for GitHub that is required for pushing the artifacts. While the local VM may not be running all the time, it can be easily recovered in case of a problem (in the worst case scenario, no new builds are produced but the previous one would still be available).  
+The recently introduced solution for muCommander involves building the nightly builds using a local virtual machine (with Jenkins) that pushes the artifacts to GitHub. This way, the nightly builds are stored  "in the cloud", i.e., on a remote infrastructure that provides better availability than a local machine along with our stable releases that are also stored on GitHub. In addition, the local VM is a safe place to store a token for GitHub that is required for pushing the artifacts. While the local VM may not be running all the time, it can be easily recovered in case of a problem (in the worst case scenario, no new builds are produced but the latest would still be available).  
 
 I found no integration between Jenkins and GitHub that I could use for pushing the nightly builds to GitHub though. As I have previously mentioned, GitHub does not offer an out-of-the-box mechanism for third party tools like Jenkins or other CI/CD tools for nightly builds. This required me to write the following script that is based on the one I have found on [this post](https://medium.com/@systemglitch/continuous-integration-with-jenkins-and-github-release-814904e20776):
 
