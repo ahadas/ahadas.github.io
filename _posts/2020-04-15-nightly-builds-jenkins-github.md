@@ -41,10 +41,10 @@ md5=$(md5sum build/distributions/$artifact | awk '{print $1}')
 description="MD5:\n$md5 $artifact"
 description=$(echo "$description" | sed -z 's/\n/\\n/g') # Escape line breaks to prevent json parsing problems
  
-# Existing release
+# Query the existing release
 release=$(curl -XGET $api_endpoint/releases/tags/$tag)
  
-# Extract the id of the release from the creation response
+# Extract the id of the release from the response
 id=$(echo "$release" | sed -n -e 's/"id":\ \([0-9]\+\),/\1/p' | head -n 1 | sed 's/[[:blank:]]//g')
  
 if [ ! -z "$id" ]; then
