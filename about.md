@@ -110,41 +110,42 @@ Modularity 2015
 FOSDEM, 2019  
 
 [<img src="/images/pdf.png" width="25">](/slides/high_availability_with_no_split_brains.pdf)
-[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=Gh2eB06IE2A&t=2s&nohtml5=False)  
+[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=Gh2eB06IE2A&t=2s&nohtml5=False)
 **High Availability with No Split Brains!**  
 DevConf.cz, 2018  
 
+[<img src="/images/pdf.png" width="25">](/slides/monitoring_at_scale.pdf)
 **Monitoring At Scale: What was Recently Done and What's Next in oVirt**  
-[<img src="/images/pdf.png" width="25">](/slides/monitoring_at_scale.pdf)  
 Open Source Summit Europe, 2017  
 
+[<img src="/images/pdf.png" width="25">](/slides/programming17.pdf)
 **Language Oriented Modularity: From Theory to Practice**  
-[<img src="/images/pdf.png" width="25">](/slides/programming17.pdf)  
 Research papers track, &lt;Programming&gt; 2017  
 
-**Experiencing with Language Oriented Modularity**  
 [<img src="/images/pdf.png" width="25">](/slides/poster_17.pdf)
-[<img src="/images/pdf.png" width="25">](/slides/Experiencing with Language Oriented Modularity.pdf)  
+[<img src="/images/pdf.png" width="25">](/slides/Experiencing with Language Oriented Modularity.pdf)
+**Experiencing with Language Oriented Modularity**  
 Poster session, &lt;Programming&gt; 2017  
 
-**Language Oriented Modularity: From Theory to Practice**  
 [<img src="/images/pdf.png" width="25">](/slides/src_16.pdf)
-[<img src="/images/pdf.png" width="25">](/slides/poster_src_16.pdf)  
+[<img src="/images/pdf.png" width="25">](/slides/poster_src_16.pdf)
+**Language Oriented Modularity: From Theory to Practice**  
 Student Research Competition, Modularity 2016  
 
+[<img src="/images/pdf.png" width="25">](/slides/Toward Disposable Domain-Specific Aspect Languages.pdf)
 **Toward disposable domain-specific aspect languages**  
-[<img src="/images/pdf.png" width="25">](/slides/Toward Disposable Domain-Specific Aspect Languages.pdf)  
 Workshop on Foundations Of Aspect-Oriented Languages 2016  
 
+[<img src="/images/pdf.png" width="25">](/slides/Toward Practical Language Oriented Modularity.pdf)
 **Toward practical language oriented modularity**  
-[<img src="/images/pdf.png" width="25">](/slides/Toward Practical Language Oriented Modularity.pdf)  
 Workshop on Language Modularity À La Mode 2016  
 
+[<img src="/images/pdf.png" width="25">](/slides/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)
 **Application-specific language-oriented modularity: a case study of the ovirt project**  
-[<img src="/images/pdf.png" width="25">](/slides/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)  
 Workshop on Modularity Across the System Stack 2016  
 
-[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=rYrnfduAkU0&nohtml5=False)  **Managed conversion of guests to oVirt**  
+[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=rYrnfduAkU0&nohtml5=False)
+**Managed conversion of guests to oVirt**  
 KVM Forum 2015  
 
 [<img src="/images/pdf.png" width="25">](/slides/position_15.pdf)
@@ -168,8 +169,8 @@ Demo session, Modularity 2015
 **Moving your Virtual Machines to oVirt with ease**  
 FOSDEM 2015  
 
-[<img src="/images/pdf.png" width="18">](/slides/ram_snapshots.pdf) 
-[<img src="/images/video.png" width=18"">](https://www.youtube.com/watch?v=xIhPV66uGo8)
+[<img src="/images/pdf.png" width="25">](/slides/ram_snapshots.pdf)
+[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=xIhPV66uGo8)
 **RAM Snapshots in oVirt**  
 CloudOpen Europe 2013  
 
