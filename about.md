@@ -105,13 +105,13 @@ Modularity 2015
 
 # Talks {#presentations}
 [<img src="/images/pdf.png" width="25">](/slides/toward_exploring_virtual_disks_using_a_file_manager.pdf)
-[<img src="/images/video.png" width="25">](https://video.fosdem.org/2019/H.2213/vai_towards_exploring_virtual_disks.mp4)  
+[<img src="/images/video.png" width="25">](https://video.fosdem.org/2019/H.2213/vai_towards_exploring_virtual_disks.mp4)
 **Toward exploring virtual disks using a file manager!**  
 FOSDEM, 2019  
 
-**High Availability with No Split Brains!**  
 [<img src="/images/pdf.png" width="25">](/slides/high_availability_with_no_split_brains.pdf)
 [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=Gh2eB06IE2A&t=2s&nohtml5=False)  
+**High Availability with No Split Brains!**  
 DevConf.cz, 2018  
 
 **Monitoring At Scale: What was Recently Done and What's Next in oVirt**  
@@ -168,7 +168,7 @@ Demo session, Modularity 2015
 **Moving your Virtual Machines to oVirt with ease**  
 FOSDEM 2015  
 
-[<img src="/images/pdf.png" width="18">](/slides/ram_snapshots.pdf)
+[<img src="/images/pdf.png" width="18">](/slides/ram_snapshots.pdf) 
 [<img src="/images/video.png" width=18"">](https://www.youtube.com/watch?v=xIhPV66uGo8)
 **RAM Snapshots in oVirt**  
 CloudOpen Europe 2013  
