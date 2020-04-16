@@ -169,9 +169,7 @@ Demo session, Modularity 2015
 [<img src="/images/pdf.png" width="25">](/slides/v2v_fosdem.pdf)  
 FOSDEM 2015  
 
-**RAM Snapshots in oVirt**  
-[<img src="/images/pdf.png" width="25">](/slides/ram_snapshots.pdf)
-[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=xIhPV66uGo8)  
+[<img src="/images/pdf.png" width="25">](/slides/ram_snapshots.pdf) [<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=xIhPV66uGo8) **RAM Snapshots in oVirt**  
 CloudOpen Europe 2013  
 
 # Patents {#patents}
