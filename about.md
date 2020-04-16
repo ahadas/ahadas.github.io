@@ -51,33 +51,33 @@ Domain specific languages (DSL)
 Software development methodologies and tools.
 
 ## Publications {#publications}
+[<img src="/images/pdf.png" width="15">](https://arxiv.org/ftp/arxiv/papers/1703/1703.10858.pdf)
 **Language oriented modularity: from theory to practice**  
-[<img src="/images/pdf.png" width="25">](https://arxiv.org/ftp/arxiv/papers/1703/1703.10858.pdf)
 Arik Hadas, David H. Lorenz  
 The Art, Science and Engineering of Programming 2017  
 
+[<img src="/images/pdf.png" width="15">](http://src.acm.org/binaries/content/assets/src/2016/arikhadas.pdf)
 **Language Oriented Modularity: A Practical Approach**  
-[<img src="/images/pdf.png" width="25">](http://src.acm.org/binaries/content/assets/src/2016/arikhadas.pdf)
 Arik Hadas  
 Student Research Competition, Grand Final 2017  
 
+[<img src="/images/pdf.png" width="15">](/papers/Language Oriented Modularity: From Theory to Practice.pdf)
 **Language oriented modularity: from theory to practice**  
-[<img src="/images/pdf.png" width="25">](/papers/Language Oriented Modularity: From Theory to Practice.pdf)
 Arik Hadas  
 Modularity (Companion) 2016  
 
+[<img src="/images/pdf.png" width="15">](/papers/Toward Disposable Domain-Specific Aspect Languages.pdf)
 **Toward disposable domain-specific aspect languages**  
-[<img src="/images/pdf.png" width="25">](/papers/Toward Disposable Domain-Specific Aspect Languages.pdf)
 Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2016  
 
+[<img src="/images/pdf.png" width="15">](/papers/Toward Practical Language Oriented Modularity.pdf)
 **Toward practical language oriented modularity**  
-[<img src="/images/pdf.png" width="25">](/papers/Toward Practical Language Oriented Modularity.pdf)
 Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2016  
 
+[<img src="/images/pdf.png" width="15">](/papers/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)
 **Application-specific language-oriented modularity: a case study of the ovirt  project**  
-[<img src="/images/pdf.png" width="25">](/papers/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)
 Arik Hadas, David H. Lorenz  
 Modularity (Companion) 2016  
 
