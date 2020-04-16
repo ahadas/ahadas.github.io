@@ -144,8 +144,7 @@ Workshop on Language Modularity À La Mode 2016
 [<img src="/images/pdf.png" width="25">](/slides/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)  
 Workshop on Modularity Across the System Stack 2016  
 
-**Managed conversion of guests to oVirt**  
-[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=rYrnfduAkU0&nohtml5=False)  
+[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=rYrnfduAkU0&nohtml5=False)  **Managed conversion of guests to oVirt**  
 KVM Forum 2015  
 
 **Demanding First-Class Equality for Domain Specific Aspect Languages**  
@@ -164,7 +163,7 @@ Demo session, Modularity 2015
 [<img src="/images/pdf.png" width="18">](/slides/v2v_fosdem.pdf) **Moving your Virtual Machines to oVirt with ease**  
 FOSDEM 2015  
 
-[<img src="/images/pdf.png" width="18">](/slides/ram_snapshots.pdf)[<img src="/images/video.png" width=18"">](https://www.youtube.com/watch?v=xIhPV66uGo8) **RAM Snapshots in oVirt**  
+[<img src="/images/pdf.png" width="18">](/slides/ram_snapshots.pdf)  [<img src="/images/video.png" width=18"">](https://www.youtube.com/watch?v=xIhPV66uGo8)  **RAM Snapshots in oVirt**  
 CloudOpen Europe 2013  
 
 # Patents {#patents}
