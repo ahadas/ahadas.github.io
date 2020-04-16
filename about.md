@@ -104,55 +104,55 @@ A Language Workbench for Creating Production-Ready Extensions to AspectJ
 Modularity 2015
 
 # Talks {#presentations}
-[<img src="/images/pdf.png" width="25">](/slides/toward_exploring_virtual_disks_using_a_file_manager.pdf)
-[<img src="/images/video.png" width="25">](https://video.fosdem.org/2019/H.2213/vai_towards_exploring_virtual_disks.mp4)
+[<img src="/images/pdf.png" width="15">](/slides/toward_exploring_virtual_disks_using_a_file_manager.pdf)
+[<img src="/images/video.png" width="15">](https://video.fosdem.org/2019/H.2213/vai_towards_exploring_virtual_disks.mp4)
 **Toward exploring virtual disks using a file manager!**  
 FOSDEM, 2019  
 
-[<img src="/images/pdf.png" width="25">](/slides/high_availability_with_no_split_brains.pdf)
-[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=Gh2eB06IE2A&t=2s&nohtml5=False)
+[<img src="/images/pdf.png" width="15">](/slides/high_availability_with_no_split_brains.pdf)
+[<img src="/images/video.png" width="15">](https://www.youtube.com/watch?v=Gh2eB06IE2A&t=2s&nohtml5=False)
 **High Availability with No Split Brains!**  
 DevConf.cz, 2018  
 
-[<img src="/images/pdf.png" width="25">](/slides/monitoring_at_scale.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/monitoring_at_scale.pdf)
 **Monitoring At Scale: What was Recently Done and What's Next in oVirt**  
 Open Source Summit Europe, 2017  
 
-[<img src="/images/pdf.png" width="25">](/slides/programming17.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/programming17.pdf)
 **Language Oriented Modularity: From Theory to Practice**  
 Research papers track, &lt;Programming&gt; 2017  
 
-[<img src="/images/pdf.png" width="25">](/slides/poster_17.pdf)
-[<img src="/images/pdf.png" width="25">](/slides/Experiencing with Language Oriented Modularity.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/poster_17.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/Experiencing with Language Oriented Modularity.pdf)
 **Experiencing with Language Oriented Modularity**  
 Poster session, &lt;Programming&gt; 2017  
 
-[<img src="/images/pdf.png" width="25">](/slides/src_16.pdf)
-[<img src="/images/pdf.png" width="25">](/slides/poster_src_16.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/src_16.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/poster_src_16.pdf)
 **Language Oriented Modularity: From Theory to Practice**  
 Student Research Competition, Modularity 2016  
 
-[<img src="/images/pdf.png" width="25">](/slides/Toward Disposable Domain-Specific Aspect Languages.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/Toward Disposable Domain-Specific Aspect Languages.pdf)
 **Toward disposable domain-specific aspect languages**  
 Workshop on Foundations Of Aspect-Oriented Languages 2016  
 
-[<img src="/images/pdf.png" width="25">](/slides/Toward Practical Language Oriented Modularity.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/Toward Practical Language Oriented Modularity.pdf)
 **Toward practical language oriented modularity**  
 Workshop on Language Modularity À La Mode 2016  
 
-[<img src="/images/pdf.png" width="25">](/slides/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/Application-Specific Language-Oriented Modularity: A Case Study of the oVirt Project.pdf)
 **Application-specific language-oriented modularity: a case study of the ovirt project**  
 Workshop on Modularity Across the System Stack 2016  
 
-[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=rYrnfduAkU0&nohtml5=False)
+[<img src="/images/video.png" width="15">](https://www.youtube.com/watch?v=rYrnfduAkU0&nohtml5=False)
 **Managed conversion of guests to oVirt**  
 KVM Forum 2015  
 
-[<img src="/images/pdf.png" width="25">](/slides/position_15.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/position_15.pdf)
 **Demanding First-Class Equality for Domain Specific Aspect Languages**  
 Position papers track, Modularity 2015  
 
-[<img src="/images/pdf.png" width="25">](/slides/poster_15.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/poster_15.pdf)
 **First Class Domain Specific Aspect Languages**  
 Poster session, Modularity 2015  
 
@@ -161,16 +161,16 @@ Poster session, Modularity 2015
 **A Language Workbench for Creating Production-Ready Extensions to AspectJ**  
 Student Research Competition, Modularity 2015  
 
-[<img src="/images/pdf.png" width="25">](/slides/demo_15.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/demo_15.pdf)
 **A Language Workbench for Implementing Your Favorite Extension to AspectJ**  
 Demo session, Modularity 2015  
 
-[<img src="/images/pdf.png" width="25">](/slides/v2v_fosdem.pdf)
+[<img src="/images/pdf.png" width="15">](/slides/v2v_fosdem.pdf)
 **Moving your Virtual Machines to oVirt with ease**  
 FOSDEM 2015  
 
-[<img src="/images/pdf.png" width="25">](/slides/ram_snapshots.pdf)
-[<img src="/images/video.png" width="25">](https://www.youtube.com/watch?v=xIhPV66uGo8)
+[<img src="/images/pdf.png" width="15">](/slides/ram_snapshots.pdf)
+[<img src="/images/video.png" width="15">](https://www.youtube.com/watch?v=xIhPV66uGo8)
 **RAM Snapshots in oVirt**  
 CloudOpen Europe 2013  
 
