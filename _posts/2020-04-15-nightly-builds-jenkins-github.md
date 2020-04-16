@@ -31,7 +31,7 @@ I found no integration between Jenkins and GitHub that I could use for pushing t
 echo "Publishing on Github..."
 token="<your-token>"
  
-# Get the title and the description as separated variables
+# Setup variables
 api_endpoint="https://api.github.com/repos/mucommander/mucommander"
 uploads_endpoint="https://uploads.github.com/repos/mucommander/mucommander"
 tag="nightly"
