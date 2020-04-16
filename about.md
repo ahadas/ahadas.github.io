@@ -152,8 +152,7 @@ KVM Forum 2015
 [<img src="/images/pdf.png" width="25">](/slides/position_15.pdf)  
 Position papers track, Modularity 2015  
 
-**First Class Domain Specific Aspect Languages**  
-[<img src="/images/pdf.png" width="25">](/slides/poster_15.pdf)  
+[<img src="/images/pdf.png" width="25">](/slides/poster_15.pdf) **First Class Domain Specific Aspect Languages**  
 Poster session, Modularity 2015  
 
 [<img src="/images/pdf.png" width="18">](/slides/src_15.pdf) [<img src="/images/pdf.png" width=18"">](/slides/poster_src_15.pdf) **A Language Workbench for Creating Production-Ready Extensions to AspectJ**  
@@ -165,7 +164,7 @@ Demo session, Modularity 2015
 [<img src="/images/pdf.png" width="18">](/slides/v2v_fosdem.pdf) **Moving your Virtual Machines to oVirt with ease**  
 FOSDEM 2015  
 
-[<img src="/images/pdf.png" width="18">](/slides/ram_snapshots.pdf) [<img src="/images/video.png" width=18"">](https://www.youtube.com/watch?v=xIhPV66uGo8) **RAM Snapshots in oVirt**  
+[<img src="/images/pdf.png" width="18">](/slides/ram_snapshots.pdf)[<img src="/images/video.png" width=18"">](https://www.youtube.com/watch?v=xIhPV66uGo8) **RAM Snapshots in oVirt**  
 CloudOpen Europe 2013  
 
 # Patents {#patents}
