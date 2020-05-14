@@ -177,11 +177,16 @@ CloudOpen Europe 2013
 # Patents {#patents}
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200073551)
 Moving outdated data from a multi-volume virtual disk to a backup storage device  
-
-* [Automated restart of paused virtual machines due to input/output errors](https://patents.justia.com/patent/20200034255)
-* [Gradual creation process of server virtual machines](https://patents.justia.com/patent/20190188019)  
-* [Fast evacuation of a cloned disk to a storage device](https://patents.justia.com/patent/20190171386)  
-* [Base state for thin-provisioned volumes](https://patents.justia.com/patent/20190129740)  
-* [Detach virtual machine from virtual machine template](https://patents.justia.com/patent/20190065170)  
-* [Deleting disks while maintaining snapshot consistency in a virtualized data-center](https://patents.justia.com/patent/20180217765)  
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200034255)
+Automated restart of paused virtual machines due to input/output errors  
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20190188019)
+Gradual creation process of server virtual machines  
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20190171386)
+Fast evacuation of a cloned disk to a storage device  
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20190129740)
+Base state for thin-provisioned volumes  
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20190065170)
+Detach virtual machine from virtual machine template  
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20180217765)
+Deleting disks while maintaining snapshot consistency in a virtualized data-center  
 
