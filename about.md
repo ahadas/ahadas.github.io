@@ -175,7 +175,9 @@ FOSDEM 2015
 CloudOpen Europe 2013  
 
 # Patents {#patents}
-* [Moving outdated data from a multi-volume virtual disk to a backup storage device](https://patents.justia.com/patent/20200073551)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200073551)
+Moving outdated data from a multi-volume virtual disk to a backup storage device  
+
 * [Automated restart of paused virtual machines due to input/output errors](https://patents.justia.com/patent/20200034255)
 * [Gradual creation process of server virtual machines](https://patents.justia.com/patent/20190188019)  
 * [Fast evacuation of a cloned disk to a storage device](https://patents.justia.com/patent/20190171386)  
