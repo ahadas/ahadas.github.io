@@ -13,7 +13,7 @@ Following are the projects I work on nowadays or worked on in the past.
 More information about my open source contributions is available on [Open HUB](https://www.openhub.net/accounts/Arik_Hadas/).
 
 ## KubeVirt {#kubevirt}
-[KubeVirt](https://kubevirt.io) is an extension to Kubernetes that enables running virtual machines along side containers within a Kubernetes cluster.  
+[KubeVirt](https://kubevirt.io) is an extension to Kubernetes that enables running virtual machines alongside containers within a Kubernetes cluster.  
 
 I have been contributing to KubeVirt since 2018.  
 
