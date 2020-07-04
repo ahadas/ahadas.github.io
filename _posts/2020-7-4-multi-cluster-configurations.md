@@ -36,7 +36,7 @@ This solution assumes the system is composed of one or more hub-clusters and eac
 
 In our solution, Argo CD that is deployed to the hub-cluster is defined with an app(s) that retrieves the configuration from the remote Git repository. Then Argo CD pulls the configuration from the remote Git repository, transforms it into Openshift/Hive entities named SelectorSyncSets and finally, Openshift/Hive propagates the SelectorSyncSets to the spoke/managed clusters. The following diagram illustrates this process.
 
-![Argo CD and Openshift/Hive](../images/multi-cluster-conf/argo-hive.png")
+![Argo CD and Openshift/Hive](../images/multi-cluster-conf/argo-hive.png)
 
 More specifically, we define several applications that are set to pull the configuration from a Git repository on GitHub. These applications are also configured with [custom tools](https://argoproj.github.io/argo-cd/operator-manual/custom_tools/) that transform the pulled configuration into SelectorSyncSets. During the transformation variables within the original configuration can be replaced with details that are specific to a hub or spoke/managed cluster. By using SelectorSyncSets (rather than ordinary SyncSets), the configuration propagates to spoke/managed clusters based on their labels. The label-matching mechanism is the one that is9 commonly used by Kubernetes. The code transformation code is available [here](https://github.com/ahadas/syncset-gen).  
 
