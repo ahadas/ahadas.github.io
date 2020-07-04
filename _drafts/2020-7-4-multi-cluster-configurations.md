@@ -32,7 +32,7 @@ We have examined a multi-cluster solution that is based on Argo CD and Openshift
 
 This solution assumes the system is composed of one or more hub-clusters and each hub-cluster manages one or more spoke/managed clusters. The spoke/managed clusters are provisioned by Openshift/Hive that runs on the hub-cluster. The configuration to propagate to the clusters reside on a remote Github repository. The next diagram depicts an example of such a system.
 
-<img alt="Multi-cluster environment" src="../images/multi-cluster-conf/multi-cluster-gitops.png" width=400/> 
+<img alt="Multi-cluster environment" src="../images/multi-cluster-conf/multi-cluster-gitops.png" width=500/> 
 
 In our solution, Argo CD that is deployed to the hub-cluster is defined with an app(s) that retrieves the configuration from the remote Git repository. Then Argo CD pulls the configuration from the remote Git repository, transforms it into Openshift/Hive entities named SelectorSyncSets and finally, Openshift/Hive propagates the SelectorSyncSets to the spoke/managed clusters. The following diagram illustrates this process.
 
