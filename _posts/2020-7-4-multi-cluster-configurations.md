@@ -3,7 +3,7 @@ layout: post
 title: Multi-Cluster Configuration with Kubernetes
 ---
 
-Few months ago I've examined the ability to propagate configurations to Kubernetes clusters in a multi-cluster environment. Here I describe the process and tools in the hope that it will be helpful for others that try to do the same thing.
+Few months ago I've examined the ability to propagate configurations to Kubernetes clusters in a multi-cluster environment. Here I describe the process and tools in the hope that it will be useful for others that try to do the same thing.
 
 # Background
 
