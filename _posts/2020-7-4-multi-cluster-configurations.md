@@ -44,4 +44,4 @@ Using this mechanism we managed to deploy [KubeVirt](https://kubevirt.io/), [Ope
 
 # Conclusion 
 
-The described solution for configuration management in a multi-cluster Kubernetes-based environment appeared to be useful for propagating a variety of configurations to spoke/managed clusters in our evaluation. For various reasons, the ones that continued that work have decided to go with other approaches. Yet, I think it might be handy for ones that look for a simple and lightweight solution that doesn't involve a centralized management application.
+The described solution for configuration management in a multi-cluster Kubernetes-based environment appeared to be useful for propagating a variety of configurations to spoke/managed clusters in our evaluation. For various reasons, the ones that continued that work have decided to embrace alternative approaches. Yet, I think it might be handy for ones that look for a simple and lightweight solution that doesn't involve a centralized management application.
