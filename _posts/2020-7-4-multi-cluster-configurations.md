@@ -7,7 +7,7 @@ Few months ago I've examined the ability to propagate configurations to Kubernet
 
 # Background
 
-When we speak about configurations in the context of Kubernetes we typically speak about yaml files that describe how certain resources within the cluster should be defined. For instance, the configuration may include a URL that metrics should be sent to. As another example, the configuration may include the entire properties of an application to be deployed to the cluster.  
+When we speak about configurations in the context of Kubernetes we typically speak about yaml files that describe how certain resources within the cluster should be defined. For instance, the configuration may include a URL that metrics should be sent to. As another example, the configuration may include all the properties of an application to be deployed to the cluster.  
 
 The GitOps paradigm promotes operating infrastructure using Git. A Git repository holds the state of the infrastructure and operators change the infrastructure using Git operations. For example, a property of one of the entities that comprise the infrastructure (e.g., a node) can be modified by modifying its corresponding resource within the Git repository (e.g., its labels). The GitOps paradigms becomes the common practice for managing the above mentioned configuration for Kubernetes.  
 
@@ -30,7 +30,7 @@ These questions, among others, may suggest that the aforementioned solution for 
 
 We have examined a multi-cluster solution that is based on Argo CD and Openshift/Hive. Conceptually, this solution is similar to the one that was [presented by Worldpay](https://assets.openshift.com/hubfs/Worldpay-fis-openshift-commons_COMMENTS.pptx.pdf) to propagate configuration to Openshift clusters.
 
-This solution assumes the system is composed of one or more hub-clusters and each hub-cluster manages one or more spoke/managed clusters. The spoke/managed clusters are provisioned by Openshift/Hive that runs on the hub-cluster. The configuration to propagate to the clusters resides on a remote Github repository. The next diagram depicts an example of such a system.
+This solution assumes the system is composed of one or more hub-clusters and each hub-cluster manages one or more spoke/managed clusters. The spoke/managed clusters are provisioned by Openshift/Hive that runs on the hub-cluster. The configuration to propagate to the clusters resides in a remote Github repository. The next diagram depicts an example of such a system.
 
 ![Multi-cluster environment](../images/multi-cluster-conf/multi-cluster-gitops.png)
 
