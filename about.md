@@ -175,18 +175,20 @@ FOSDEM 2015
 CloudOpen Europe 2013  
 
 # Patents {#patents}
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200073551)
-Moving outdated data from a multi-volume virtual disk to a backup storage device  
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200310650)
+Virtual machine synchronization and recovery  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200034255)
 Automated restart of paused virtual machines due to input/output errors  
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20190188019)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/10846011)
+Moving outdated data from a multi-volume virtual disk to a backup storage device  
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/10417034)
 Gradual creation process of server virtual machines  
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20190171386)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/10324653)
 Fast evacuation of a cloned disk to a storage device  
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20190129740)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/10628200)
 Base state for thin-provisioned volumes  
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20190065170)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/10628147)
 Detach virtual machine from virtual machine template  
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20180217765)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/10114570)
 Deleting disks while maintaining snapshot consistency in a virtualized data-center  
 
