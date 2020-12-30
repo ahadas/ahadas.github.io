@@ -22,7 +22,7 @@ The code is available [here](https://github.com/ovirt).
 ## muCommander
 [muCommander](http://www.mucommander.com) is a lightweight, cross-platform file manager with a dual-pane interface. It runs on any operating system with Java support (Mac OS X, Windows, Linux, BSD, Solaris...).
 
-Since 2007 I have been contributing to muCommander. These days I maintain the project.
+I have been contributing to muCommander since 2007. These days I maintain the project.
 
 The code is available [here](https://github.com/mucommander).
 
