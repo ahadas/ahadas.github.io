@@ -12,13 +12,6 @@ I live in Herzliya, Israel.
 Following are the projects I work on nowadays or worked on in the past.  
 More information about my open source contributions is available on [Open HUB](https://www.openhub.net/accounts/Arik_Hadas/).
 
-## KubeVirt {#kubevirt}
-[KubeVirt](https://kubevirt.io) is an extension to Kubernetes that enables running virtual machines alongside containers within a Kubernetes cluster.  
-
-I have contributed to the KubeVirt project in (roughly) August 2018 to September 2019.  
-
-The code is available [here](https://github.com/kubevirt).
-
 ## oVirt {#ovirt}
 [oVirt](http://www.ovirt.org) is a virtualization management platform optimized to the KVM hypervisor. It was founded by Red Hat as a community project that [Red Hat Virtualization](https://www.redhat.com/en/technologies/virtualization/enterprise-virtualization) is based on. It allows centralized management of virtual machines, compute, storage and networking resources, from an easy to use web-based front-end with platform independent access.
 
@@ -32,6 +25,13 @@ The code is available [here](https://github.com/ovirt).
 Since 2007 I have been contributing to muCommander. These days I maintain the project.
 
 The code is available [here](https://github.com/mucommander).
+
+## KubeVirt {#kubevirt}
+[KubeVirt](https://kubevirt.io) is an extension to Kubernetes that enables running virtual machines alongside containers within a Kubernetes cluster.  
+
+I have contributed to the KubeVirt project in (roughly) August 2018 to September 2019.  
+
+The code is available [here](https://github.com/kubevirt).
 
 ## AOP-Awesome
 A multi-DSAL development is a mode of application developemnt where in addition to one or more general purpose languages (e.g., Java, AspectJ), multiple domain-specific aspect languages (DSALs) are used. For example, one DSAL (e.g., COOL) may be used for implementing the thread synchronization concern, other for the security concern, etc. [Awesome](http://aop.cslab.openu.ac.il/research/awesome) is an aspect composition framework. Awesome makes multi-DSAL development feasible by allowing to compose a variety of aspect mechanisms, each corresponding to a specific DSAL, into a single multi-mechanism weaver.
