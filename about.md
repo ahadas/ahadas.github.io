@@ -15,7 +15,7 @@ More information about my open source contributions is available on [Open HUB](h
 ## KubeVirt {#kubevirt}
 [KubeVirt](https://kubevirt.io) is an extension to Kubernetes that enables running virtual machines alongside containers within a Kubernetes cluster.  
 
-I have been contributing to KubeVirt since 2018.  
+I have contributed to the KubeVirt project in (roughly) August 2018 to September 2019.  
 
 The code is available [here](https://github.com/kubevirt).
 
