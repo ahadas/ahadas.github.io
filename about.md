@@ -175,6 +175,10 @@ FOSDEM 2015
 CloudOpen Europe 2013  
 
 # Patents {#patents}
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210026671)
+Enforcing retention policies with respect to virtual machine snapshots  
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210026675)
+Guest-driven virtual machine snapshots  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210019161)
 Minimizing downtime of highly available virtual machines  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200310650)
