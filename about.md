@@ -4,7 +4,7 @@ layout: page
 permalink: /about/
 ---
 
-I am a hands-on manager at [Red Hat](https://www.redhat.com). I hold a master's degree in computer sceience from [The Open University of Israel](http://www.openu.ac.il) (see the [Research Section](#research)) and interested in different aspects of programming and particularly in large and distributed software development and modularization techniques.
+I am a hands-on manager at [Red Hat](https://www.redhat.com). I hold a master's degree in computer sceience from [The Open University of Israel](http://www.openu.ac.il) (see [Research Section](#research)) and interested in different aspects of programming and particularly in large and distributed software development and modularization techniques.
 
 I live in Herzliya, Israel.
 
@@ -29,7 +29,7 @@ The code is available [here](https://github.com/mucommander).
 ## KubeVirt {#kubevirt}
 [KubeVirt](https://kubevirt.io) is an extension to Kubernetes that enables running virtual machines alongside containers within a Kubernetes cluster.  
 
-I have contributed to the KubeVirt project in (roughly) August 2018 to September 2019.  
+I have contributed to the KubeVirt project from (roughly) August 2018 to September 2019.  
 
 The code is available [here](https://github.com/kubevirt).
 
