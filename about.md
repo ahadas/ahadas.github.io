@@ -181,12 +181,12 @@ Virtual machine migration to multiple destination nodes
 Enforcing retention policies with respect to virtual machine snapshots  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210026675)
 Guest-driven virtual machine snapshots  
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210019161)
-Minimizing downtime of highly available virtual machines  
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/11086649)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200310650)
 Virtual machine synchronization and recovery  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200034255)
 Automated restart of paused virtual machines due to input/output errors  
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/11086649)
+Minimizing downtime of highly available virtual machines  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/10846011)
 Moving outdated data from a multi-volume virtual disk to a backup storage device  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/10417034)
