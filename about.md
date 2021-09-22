@@ -177,7 +177,7 @@ CloudOpen Europe 2013
 # Patents {#patents}
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210248000)
 Virtual machine migration to multiple destination nodes  
-<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210026675)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210026675)
 Guest-driven virtual machine snapshots  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200310650)
 Virtual machine synchronization and recovery  
