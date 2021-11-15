@@ -175,6 +175,8 @@ FOSDEM 2015
 CloudOpen Europe 2013  
 
 # Patents {#patents}
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210349767)
+Migrating virtual machines between computing environments  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210026675)
 Guest-driven virtual machine snapshots  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200034255)
