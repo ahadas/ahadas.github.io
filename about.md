@@ -181,7 +181,7 @@ Management of containerized clusters by virtualization systems
 Migrating virtual machines between computing environments  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210026675)
 Guest-driven virtual machine snapshots  
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20200034255)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/11243855)
 Automated restart of paused virtual machines due to input/output errors  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/11169844)
 Virtual machine migration to multiple destination nodes  
