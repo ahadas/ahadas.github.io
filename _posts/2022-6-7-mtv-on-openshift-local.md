@@ -7,7 +7,7 @@ Recently I wanted to experience with [Forklift](https://github.com/konveyor/fork
 
 # Prerequisits
 
-We will need a bare-metal machine or a virtual machine with enough memory and CPU power. I used a virtual machine with 64G of RAM and 18 CPUs but I believe that even 32G of RAM and 10 CPUs would be enough. Additionally, as I won't explain how to deploy RHV, I assume there is a RHV deployment that is accessible from within the machine that Openshift local would run on.
+We will need a bare-metal machine or a virtual machine with enough memory and CPU power. I used a virtual machine with 64G of RAM and 18 CPUs but I believe that even 32G of RAM and 10 CPUs would be enough. Additionally, as I won't explain how to deploy RHV, I assume there is a RHV deployment that is accessible from within the machine that Openshift Local would run on.
 
 # Installing Openshift Local
 
