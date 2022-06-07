@@ -16,16 +16,16 @@ Follow the instructions that appear there and make sure it ends successfully and
 
 # Adjusting Openshift Local
 
-As we're going to deploy both Openshift Virtualization and the Migration Toolkit for Virtualization on this cluster, we need to override the default settings of the cluster. First, we'll increase the memory to 64G by executing
+As we're going to deploy both Openshift Virtualization and the Migration Toolkit for Virtualization on this cluster, we need to override the default settings of the cluster. First, we'll increase the memory to 64G by executing:
 ```bash
 $ crc config set memory 64000
 ```
-Similarly, we'll increase the number of CPUs to 16 by executing
+Similarly, we'll increase the number of CPUs to 16 by executing:
 ```bash
 $crc config set cpus 16'
 ```
 
-For the previous settings to be applied and since we are now going to extend the virtual disk that is used by the virtual machine that runs the cluster, we need to stop the cluster by executing
+For the previous settings to be applied and since we are now going to extend the virtual disk that is used by the virtual machine that runs the cluster, we need to stop the cluster by executing:
 ```bash
 $ crc stop
 ```
@@ -72,7 +72,7 @@ Next, we will define a storage class that enables us to provision local persiste
 
 Now we can change some of the built-in PVs to be consumable by this StorageClass. This is done by editing a PV, e.g., with 'oc edit pv pv0009' and set 'accessModes' to 'ReadWriteOnce' only and add 'storageClassName: <storage-class-name>' within the 'spec'.  
 
-You're ready for you first migration!
+You're ready for your first migration!
 
 # Execute a migration plan
 
