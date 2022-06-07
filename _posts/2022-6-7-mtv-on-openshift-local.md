@@ -66,7 +66,7 @@ Go to the OperatorHub (Operators -> OperatorHub) and search for 'cnv'. You'll ge
 
 Similarly, search for 'mtv' in the OperatorHub and install the Migration Toolkit for Virtualization Operator.
 
-# Set persistent volumes
+# Setting persistent volumes
 
 Next, we will define a storage class that enables us to provision local persistent volumes (PVs) on the VM that runs the Openshift cluster. This is done by going to Storage->StorageClasses and create a new StorageClass. Give it a name and set the 'Provisioner' field to 'kubevirt.io.hostpath-provisioner'.  
 
@@ -74,7 +74,7 @@ Now we can change some of the built-in PVs to be consumable by this StorageClass
 
 You're ready for your first migration!
 
-# Execute a migration plan
+# Executing a migration plan
 
 In order to initiate a migration you first need to log in to the UI of the Migration Toolkit for Virtualization (MTV). You can find the URL in Networking -> Routes and inspect the 'Location' of the 'virt' route within the openshift-mtv project (namespace). In my case it was 'https://virt-openshift-mtv.apps-crc.testing'. Log in with the same credentials you used for the Openshift console.  
 
