@@ -22,7 +22,7 @@ $ crc config set memory 64000
 ```
 Similarly, we'll increase the number of CPUs to 16 by executing:
 ```bash
-$crc config set cpus 16
+$ crc config set cpus 16
 ```
 
 For the previous settings to be applied and since we are now going to extend the virtual disk that is used by the virtual machine that runs the cluster, we need to stop the cluster by executing:
