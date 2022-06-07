@@ -11,7 +11,7 @@ We will need a bare-metal machine or a virtual machine with enough memory and CP
 
 # Installing Openshift Local
 
-Installing Red Hat Openshift Local is really easy. There is a detailed guide for how to do that on [console.redhat.com](https://console.redhat.com/openshift/create/local). 
+Installing Red Hat Openshift Local is really easy. There is a guide for how to do that on [console.redhat.com](https://console.redhat.com/openshift/create/local). 
 Follow the instructions that appear there and make sure it ends successfully and you are able to login to the console with the credentials that appear at the end of the process.
 
 # Adjusting Openshift Local
