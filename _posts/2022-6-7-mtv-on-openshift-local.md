@@ -12,17 +12,49 @@ We will need a bare-metal machine or a virtual machine with enough memory and CP
 # Installing Openshift Local
 
 Installing Red Hat Openshift Local is really easy. There is a detailed guide for how to do that on [console.redhat.com](https://console.redhat.com/openshift/create/local). 
-Follow the instructions that appear there and make sure ```crc start``` runs an Openshift cluster properly and you are able to login to the console with the credentials that appear at the end of the process.
+Follow the instructions that appear there and make sure it ends successfully and you are able to login to the console with the credentials that appear at the end of the process.
 
 # Adjusting Openshift Local
 
-As we're going to deploy both Openshift Virtualization and the Migration Toolkit for Virtualization on this cluster, we need to override the default settings of the cluster. First, we'll increase the memory to 64G by executing 'crc config set memory 64000'. Similarly, we'll increase the number of CPUs to 16 by executing 'crc config set cpus 16'.  
+As we're going to deploy both Openshift Virtualization and the Migration Toolkit for Virtualization on this cluster, we need to override the default settings of the cluster. First, we'll increase the memory to 64G by executing
+```bash
+$ crc config set memory 64000
+```
+Similarly, we'll increase the number of CPUs to 16 by executing
+```bash
+$crc config set cpus 16'
+```
 
-For the previous settings to be applied and since we are now going to extend the virtual disk that is used by the virtual machine that runs the cluster, we need to stop the cluster by executing 'crc stop'. Once it is stopped, we can extend the aforementioned virtual disk. I extended it by 40G using 'qemu-img resize ~/.crc/machines/crc/crc.qcow2 +40g'.  
+For the previous settings to be applied and since we are now going to extend the virtual disk that is used by the virtual machine that runs the cluster, we need to stop the cluster by executing
+```bash
+$ crc stop
+```
+Once it is stopped, we can extend the aforementioned virtual disk. I extended it by 40G using:
+```bash
+$ qemu-img resize ~/.crc/machines/crc/crc.qcow2 +40g
+```  
 
-Before starting the Openshift cluster again, you can inspect the updated settings with: 'crc config view'. If the settings look alright, start the Openshift cluster with 'crc start'.  
+Before starting the Openshift cluster again, you can inspect the updated settings with:
+```bash
+$ crc config view
+```
+If the settings look alright, start the Openshift cluster with:
+```bash
+$ crc start
+```  
 
-Next. we will extend the filesystem to consume the additional space. In order to do that, we need to login to the virtual machine using: 'ssh -i ~/.crc/machines/crc/id_ecdsa -o StrictHostKeyChecking=no core@192.168.130.11'. You can find the IP address of the virtual machine (in my case it was 192.168.130.11) with 'crc ip'. Once you're inside the virtual machine, execute 'xfs_growfs /sysroot/'.  
+Next. we will extend the filesystem to consume the additional space. In order to do that, we need to login to the virtual machine using:
+```bash
+$ ssh -i ~/.crc/machines/crc/id_ecdsa -o StrictHostKeyChecking=no core@192.168.130.11
+```
+You can find the IP address of the virtual machine (in my case it was 192.168.130.11) with:
+```bash
+$ crc ip
+````
+Once you're inside the virtual machine, execute:
+```bash
+$ xfs_growfs /sysroot/
+``` 
 
 Congratulations, you now have an Openshift cluster with enough resources to run Openshift Virtualization and Migration Toolkit for Virtualization :)
 
