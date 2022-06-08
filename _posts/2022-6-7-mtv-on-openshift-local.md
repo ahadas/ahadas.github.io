@@ -16,16 +16,16 @@ Follow the instructions that appear there and make sure it ends successfully and
 
 # Adjusting Openshift Local
 
-As we're going to deploy both Openshift Virtualization and the Migration Toolkit for Virtualization on this cluster, we need to override the default settings of the cluster. First, we'll increase the memory to 64G by executing:
+As we're going to deploy both Openshift Virtualization and the Migration Toolkit for Virtualization on this cluster, we need to override the default settings of the cluster. First, we'll increase the memory to 64G:
 ```bash
 $ crc config set memory 64000
 ```
-Similarly, we'll increase the number of CPUs to 16 by executing:
+Similarly, we'll increase the number of CPUs to 16:
 ```bash
 $ crc config set cpus 16
 ```
 
-For the previous settings to be applied and since we are now going to extend the virtual disk that is used by the virtual machine that runs the cluster, we need to stop the cluster by executing:
+For the previous settings to be applied and since we are now going to extend the virtual disk that is used by the virtual machine that runs the cluster, we need to stop the cluster:
 ```bash
 $ crc stop
 ```
@@ -43,7 +43,7 @@ If the settings look alright, start the Openshift cluster with:
 $ crc start
 ```  
 
-Next. we will extend the filesystem to consume the additional space. In order to do that, we need to login to the virtual machine using:
+Next. we will extend the filesystem to consume the additional space. In order to do that, we need to log in to the virtual machine using:
 ```bash
 $ ssh -i ~/.crc/machines/crc/id_ecdsa -o StrictHostKeyChecking=no core@192.168.130.11
 ```
@@ -51,7 +51,7 @@ You can find the IP address of the virtual machine (in my case it was 192.168.13
 ```bash
 $ crc ip
 ````
-Once you're inside the virtual machine, execute:
+Once you're inside the virtual machine, execute the following command:
 ```bash
 $ xfs_growfs /sysroot/
 ``` 
@@ -80,6 +80,6 @@ In order to initiate a migration you first need to log in to the UI of the Migra
 
 Once you are logged in to the UI of MTV, add a RHV provider under 'Providers'. You should find an Openshift Virtualization provider there as well.  
 
-Then, create mappings - go to the Mappings and define Network and Storage mapping.  
+Then, create mappings - go to the Mappings and define Network and Storage mapping from the source environment (RHV) to the target environment (Openshift Virtualization).  
 
 With that, you can now go to 'Migration Plans' and create a new migration plan. It is fairly simple to do by following the steps in that wizard. Assuming you chose a virtual machine(s) that is installed with a valid guest operating system, the execution of the migration plan would succeed and you'll find the converted virtual machines within the 'Virtualization -> VirtualMachines' view in the Openshift console.
