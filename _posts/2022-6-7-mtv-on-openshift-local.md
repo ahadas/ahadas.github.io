@@ -45,9 +45,9 @@ $ crc start
 
 Next. we will extend the filesystem to consume the additional space. In order to do that, we need to log in to the virtual machine using:
 ```bash
-$ ssh -i ~/.crc/machines/crc/id_ecdsa -o StrictHostKeyChecking=no core@192.168.130.11
+$ ssh -i ~/.crc/machines/crc/id_ecdsa -o StrictHostKeyChecking=no core@<vm ip>
 ```
-You can find the IP address of the virtual machine (in my case it was 192.168.130.11) with:
+You can find the IP address of the virtual machine with:
 ```bash
 $ crc ip
 ````
