@@ -29,7 +29,7 @@ For the previous settings to be applied and since we are now going to extend the
 ```bash
 $ crc stop
 ```
-Once it is stopped, we can extend the aforementioned virtual disk. I extended it by 40G using:
+Once it is stopped, we can extend the aforementioned virtual disk. I extended it by 40G:
 ```bash
 $ qemu-img resize ~/.crc/machines/crc/crc.qcow2 +40g
 ```  
@@ -80,6 +80,6 @@ In order to initiate a migration you first need to log in to the UI of the Migra
 
 Once you are logged in to the UI of MTV, add a RHV provider under 'Providers'. You should find an Openshift Virtualization provider there as well.  
 
-Then, create mappings - go to the Mappings and define Network and Storage mapping from the source environment (RHV) to the target environment (Openshift Virtualization).  
+Then, create mappings: go to 'Mappings' and define Network and Storage mapping from the source environment (RHV) to the target environment (Openshift Virtualization).  
 
 With that, you can now go to 'Migration Plans' and create a new migration plan. It is fairly simple to do by following the steps in that wizard. Assuming you chose a virtual machine(s) that is installed with a valid guest operating system, the execution of the migration plan would succeed and you'll find the converted virtual machines within the 'Virtualization -> VirtualMachines' view in the Openshift console.
