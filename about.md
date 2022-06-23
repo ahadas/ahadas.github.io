@@ -119,6 +119,7 @@ DevConf.cz, 2018
 Open Source Summit Europe, 2017  
 
 [<img src="/images/pdf.png" width="15">](/slides/programming17.pdf)
+[<img src="/images/video.png" width="15">](https://www.youtube.com/watch?v=QqALCBIb_pc)
 **Language Oriented Modularity: From Theory to Practice**  
 Research papers track, &lt;Programming&gt; 2017  
 
