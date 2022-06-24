@@ -177,7 +177,7 @@ CloudOpen Europe 2013
 
 # Patents {#patents}
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20220197569)
-Determining a size of virtual disks
+Determining a size of virtual disks  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20220066904)
 Simulating containerized clusters  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210373965)
