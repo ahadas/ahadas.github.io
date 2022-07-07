@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Push Custom Image to Openshift Local
+title: Push Custom Images to Openshift Local
 ---
 
 This post describes the next step in our journey to deploy MTV (Migration Toolkit for Virtualization) on Openshift Local: deploying a custom image to Openshift Local without going through an external registry like quay.io
 
 # Prerequisits
 
-Set up an Openshift Local cluster and deploy MTV on it as described [here](http://ahadas.com/mtv-on-openshift-local/) (note that you should also make the PVs accessible to the pods).  
+Set up an Openshift Local cluster and deploy MTV on it as described [here](http://ahadas.com/mtv-on-openshift-local/) (note that you should also make the PVs accessible to the pods for being able to start VMs).  
 
-Clone a repo of Forklift, like [Forklift Controller](https://github.com/konveyor/forklift-controller) and make sure you are able to build (`podman build .`) and tag an image (podman tag <image-id> <tag-id>).  
+Clone a repo of Forklift, like [Forklift Controller](https://github.com/konveyor/forklift-controller) and make sure you are able to build (`podman build .`) and tag an image (`podman tag <image-id> <tag-id>`).  
 
 # Expose image-registry
 
@@ -48,7 +48,7 @@ $ podman push image-registry.openshift-image-registry.svc:5000/openshift/forklif
 
 Since we didn't specify a tag, the tag defaults to `latest`.
 
-# Using the custom image for forklift-controller
+# Using a custom image for forklift-controller
 This part is application-specific but this is a common pattern to apps that are deployed with operators. We will change the image that is injected to the operator.  
 
 First, identify the ClusterServiceVersion in the relevant namespace (in my case it was called mtv-operator.v2.3.1 in the openshift-mtv namespace).  
