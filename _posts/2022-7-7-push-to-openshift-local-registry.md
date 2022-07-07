@@ -20,7 +20,7 @@ $ oc port-forward --address 0.0.0.0 -n openshift-image-registry svc/image-regist
 
 # Accessing image-registry from outside
 
-Next we'll update /etc/hosts on the outer machine:  
+Next we'll update `/etc/hosts` on the outer machine:  
 ```bash
 $ echo "<crc-ip> image-registry.openshift-image-registry.svc" >> /etc/hosts
 ```
@@ -59,4 +59,4 @@ $ oc edit csv -n openshift-mtv mtv-operator.v2.3.1
 ```
 And setting the value of RELATED_IMAGE_CONTROLLER to: `image-registry.openshift-image-registry.svc:5000/openshift/forklift:latest`
 
-Finally delete the operator deployment and reprovision the Forklift` Controller, which will now use the new image from the internal registry.
+Finally, delete the operator deployment and reprovision the Forklift` Controller, which will now use the new image from the internal registry.
