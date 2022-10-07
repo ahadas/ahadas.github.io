@@ -184,7 +184,7 @@ Simulating containerized clusters
 Management of containerized clusters by virtualization systems  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210349767)
 Migrating virtual machines between computing environments  
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210026675)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/11461121)
 Guest-driven virtual machine snapshots  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/11243855)
 Automated restart of paused virtual machines due to input/output errors  
