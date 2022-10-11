@@ -182,7 +182,7 @@ Determining a size of virtual disks
 Simulating containerized clusters  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210373965)
 Management of containerized clusters by virtualization systems  
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20210349767)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/11467886)
 Migrating virtual machines between computing environments  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/11461121)
 Guest-driven virtual machine snapshots  
