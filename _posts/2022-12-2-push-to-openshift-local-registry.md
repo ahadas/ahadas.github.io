@@ -15,11 +15,11 @@ Clone [the repository of Forklift](https://github.com/kubev2v/forklift) and make
 
 Do the following steps that are taken from the [Openshift documentation](https://docs.openshift.com/container-platform/4.11/registry/securing-exposing-registry.html):  
 
-```bash
+```
 $ HOST=$(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')
 ```
 
-```bash
+```
 $ oc get secret -n openshift-ingress  router-certs-default -o go-template='{{index .data "tls.crt"}}' | base64 -d | sudo tee /etc/pki/ca-trust/source/anchors/${HOST}.crt  > /dev/null
 ```
 
