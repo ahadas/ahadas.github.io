@@ -19,8 +19,8 @@ Do the following steps that are taken from the [Openshift documentation](https:/
 $ HOST=$(oc get route default-route -n openshift-image-registry --template='{{ .spec.host }}')
 ```
 
-```raw
-$ oc get secret -n openshift-ingress  router-certs-default -o go-template='{{index .data "tls.crt"}}' | base64 -d | sudo tee /etc/pki/ca-trust/source/anchors/${HOST}.crt  > /dev/null
+```bash
+$ oc get secret -n openshift-ingress  router-certs-default -o go-template='{% raw %}{{index .data "tls.crt"}}{% endraw %}' | base64 -d | sudo tee /etc/pki/ca-trust/source/anchors/${HOST}.crt  > /dev/null
 ```
 
 ```bash
