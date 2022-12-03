@@ -9,7 +9,7 @@ I am a hands-on manager at [Red Hat](https://www.redhat.com). I hold a master's 
 I live in Herzliya, Israel.
 
 # Projects
-Following are the projects I work on nowadays or worked on in the past.  
+Following are projects I work on these days or major ones I worked on in the past.  
 More information about my open source contributions is available on [Open HUB](https://www.openhub.net/accounts/Arik_Hadas/).
 
 ## oVirt {#ovirt}
