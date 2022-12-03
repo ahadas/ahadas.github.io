@@ -12,6 +12,13 @@ I live in Herzliya, Israel.
 Following are projects I work on these days or major ones I worked on in the past.  
 More information about my open source contributions is available on [Open HUB](https://www.openhub.net/accounts/Arik_Hadas/).
 
+## KubeV2V/Forklift {#forklift}
+[Forklift](https://www.konveyor.io/tools/forklift) is an extension to Kubernetes that enables converting virtual machines that runs on vSphere / oVirt (and later OpenStack) to [KubeVirt](#kubevirt).  
+
+I have been contributing to Forklift since mid-2022.  
+
+The code is available [here](https://github.com/kubev2v).
+
 ## oVirt {#ovirt}
 [oVirt](http://www.ovirt.org) is a virtualization management platform optimized to the KVM hypervisor. It was founded by Red Hat as a community project that [Red Hat Virtualization](https://www.redhat.com/en/technologies/virtualization/enterprise-virtualization) is based on. It allows centralized management of virtual machines, compute, storage and networking resources, from an easy to use web-based front-end with platform independent access.
 
