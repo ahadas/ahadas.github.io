@@ -111,6 +111,9 @@ A Language Workbench for Creating Production-Ready Extensions to AspectJ
 Modularity 2015
 
 # Talks {#presentations}
+**Case study: volume populators for virtual disks?**  
+DevConf.cz, 2023  
+
 [<img src="/images/pdf.png" width="15">](/slides/toward_exploring_virtual_disks_using_a_file_manager.pdf)
 [<img src="/images/video.png" width="15">](https://video.fosdem.org/2019/H.2213/vai_towards_exploring_virtual_disks.mp4)
 **Toward exploring virtual disks using a file manager!**  
