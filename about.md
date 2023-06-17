@@ -111,6 +111,7 @@ A Language Workbench for Creating Production-Ready Extensions to AspectJ
 Modularity 2015
 
 # Talks {#presentations}
+[<img src="/images/pdf.png" width="15">](/slides/Volume_Populators_-_devconf.cz.pdf)
 **Case study: volume populators for virtual disks?**  
 DevConf.cz, 2023  
 
