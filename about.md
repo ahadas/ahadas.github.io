@@ -13,7 +13,7 @@ Following are projects I work on these days or major ones I worked on in the pas
 More information about my open source contributions is available on [Open HUB](https://www.openhub.net/accounts/Arik_Hadas/).
 
 ## KubeV2V/Forklift {#forklift}
-[Forklift](https://www.konveyor.io/tools/forklift) is an extension to Kubernetes that enables converting virtual machines that runs on vSphere / oVirt (and later OpenStack) to [KubeVirt](#kubevirt).  
+[Forklift](https://www.konveyor.io/tools/forklift) is an extension to Kubernetes that enables to convert virtual machines that run on vSphere / oVirt / OpenStack to [KubeVirt](#kubevirt).  
 
 I have been contributing to Forklift since mid-2022.  
 
