@@ -112,6 +112,7 @@ Modularity 2015
 
 # Talks {#presentations}
 [<img src="/images/pdf.png" width="15">](/slides/Volume_Populators_-_devconf.cz.pdf)
+[<img src="/images/video.png" width="15">](https://youtu.be/BJ0Sa29Ekrs)
 **Case study: volume populators for virtual disks?**  
 DevConf.cz, 2023  
 
