@@ -188,7 +188,7 @@ FOSDEM 2015
 CloudOpen Europe 2013  
 
 # Patents {#patents}
-[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20220066904)
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/12050525)
 Simulating containerized clusters  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/11797234)
 Determining a size of virtual disks  
