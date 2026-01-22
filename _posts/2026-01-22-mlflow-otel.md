@@ -101,7 +101,7 @@ I thought this could be another issue I could introduce a fix for, so I asked Cl
 
 All in all, it was nice to see everything working smoothly eventually, as shown in this demonstration:
 
-[![Demonstration](https://img.youtube.com/vi/Kv6HQ5qJkv8/maxresdefault.jpg)](https://www.youtube.com/watch?v=Kv6HQ5qJkv8)
+[![Demonstration](https://img.youtube.com/vi/Kv6HQ5qJkv8/1.jpg)](https://www.youtube.com/watch?v=Kv6HQ5qJkv8)
 
 It turned out that the above-mentioned architecture considerations weren't that relevant, as many would have seen the OpenTelemetry approach as the preferred option anyway. There were no surprising findings either. However, it was also nice to become more familiar with MLflow and with development processes in OpenShift AI.
 
