@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Production-level observability of agentic AI with MLflow
+title: Production observability of agentic AI with MLflow
 ---
 
 It's been a while since I posted here, but as part of my work on OpenShift AI (that transition could be a topic for another post), I expect to have more interesting content to share. This post covers an exploration I participated in, focused on sending metrics to MLflow for monitoring agentic workflows in production.
@@ -101,7 +101,7 @@ I thought this could be another issue I could introduce a fix for, so I asked Cl
 
 All in all, it was nice to see everything working smoothly eventually, as shown in this demonstration:
 
-![Demonstration](../_videos/mlflow-otel.mov)
+![Demonstration](../_videos/mlflow-otel.m4v)
 
 It turned out that the above-mentioned architecture considerations weren't that relevant, as many would have seen the OpenTelemetry approach as the preferred option anyway. There were no surprising findings either. However, it was also nice to become more familiar with MLflow and with development processes in OpenShift AI.
 
