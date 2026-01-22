@@ -3,7 +3,7 @@ layout: post
 title: Production observability of agentic AI with MLflow
 ---
 
-It's been a while since I posted here, but as part of my work on OpenShift AI (that transition could be a topic for another post), I expect to have more interesting content to share. This post covers an exploration I participated in, focused on sending metrics to MLflow for monitoring agentic workflows in production.
+It's been a while since I posted here, but as part of my work on OpenShift AI (that transition could be a topic for another post), I expect to have more interesting content to share. This post covers an exploration I participated in, focused on sending traces to MLflow for monitoring agentic workflows in production.
 
 # Background
 
@@ -23,13 +23,13 @@ However, considering the broader picture, we determined it was worth exploring h
 
 # Having a Central OTEL Collector
 
-There are various ways to integrate MLflow with the typical observability stack in OpenShift. We chose to investigate using an OpenTelemetry collector that would receive traces from different components and export them to the OTEL endpoint in MLflow Tracking Server, as illustrated in the following diagram:
+There are various ways to integrate MLflow with the typical observability stack in OpenShift. We chose to investigate using an OpenTelemetry collector that would receive traces from different components and export them to the OTEL endpoint of MLflow Tracking Server, as illustrated in the following diagram:
 
 ![Propagating traces to MLflow through a central OTEL collector](../images/otel-collector-mlflow.png)
 
 # Simple Export Fails...
 
-The very first attempt to export traces to the OTEL endpoint in MLflow Tracking Server failed with an error: "Workspace context is required for this request". I was already familiar with this error from previous experiments with MLflow and knew it stemmed from an additional layer that was added to verify that a namespace/project is set for the request, which rejected the request.  
+The very first attempt to export traces to the OTEL endpoint of MLflow Tracking Server failed with an error: "Workspace context is required for this request". I was already familiar with this error from previous experiments with MLflow and knew it stemmed from an additional layer that was added to verify that a namespace/project is set for the request, which rejected the request.  
 
 I used Claude Code to identify the root cause and come up with a fix. A fix [was posted](https://github.com/opendatahub-io/mlflow/pull/75) and is expected to get included in a future version of OpenShift AI. With that fix, I was able to post traces from within the MLflow pod using:
 
@@ -46,7 +46,7 @@ curl -i -X POST \
 
 # Fixing a Resolved Issue...
 
-Next, I configured an OpenTelemetry collector that can receive traces over gRPC or HTTP and export them to the OTEL endpoint in MLflow Tracking Server:
+Next, I configured an OpenTelemetry collector that can receive traces over gRPC or HTTP and export them to the OTEL endpoint of MLflow Tracking Server:
 
 ```yaml
 apiVersion: opentelemetry.io/v1beta1
