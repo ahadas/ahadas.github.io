@@ -95,7 +95,7 @@ spec:
 
 With this configuration, a trace I sent to the collector appeared in the MLflow Tracking Server database. However, I noticed it was being sent multiple times until reaching a retry limit. I'll spare you the technical details of the issue [1], as the interesting part is about the fix.  
 
-I thought this could be another issue I could introduce a fix for, so I asked Claude Code to produce one and was about to submit it to [the main MLflow repository](https://github.com/mlflow/mlflow). However, when rebasing, I discovered [the issue had already been fixed there](https://github.com/mlflow/mlflow/commit/6887d3a85ab50659ac78e252983b55c379c56887)! The lesson learned from this is twofold: (A) I'll need to get used to working with midstream repositories, which didn't exist in other projects I've worked on; and (B) Claude Code doesn't appear to check parent repositories even when GitHub integration is enabled.
+I thought this could be another issue I could contribute a fix for, so I asked Claude Code to produce one and was about to submit it to [the main MLflow repository](https://github.com/mlflow/mlflow). However, when rebasing, I discovered [the issue had already been fixed there](https://github.com/mlflow/mlflow/commit/6887d3a85ab50659ac78e252983b55c379c56887)! The lesson learned from this is twofold: (A) I'll need to get used to working with midstream repositories, which didn't exist in other projects I've worked on; and (B) Claude Code doesn't appear to check parent repositories even when GitHub integration is enabled.
 
 # Summary
 
