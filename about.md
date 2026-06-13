@@ -188,6 +188,8 @@ FOSDEM 2015
 CloudOpen Europe 2013  
 
 # Patents {#patents}
+[<img src="/images/link.png" width="15">](https://patents.justia.com/patent/20250383905)
+Maintaining a virtual machine's network configuration through a migration process
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/12050525)
 Simulating containerized clusters  
 [<img src="/images/link.png" width="15">](https://patents.justia.com/patent/11797234)
